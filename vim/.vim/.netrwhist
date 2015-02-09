@@ -1,0 +1,4 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_1='/home/xliu102/.theano'
+let g:netrw_dirhist_2='/mnt/sdb/xliu102/code/DeepLearning/caffe/models/bvlc_reference_caffenet'
