@@ -87,7 +87,7 @@ fi
 
 # Add colors to ls
 eval `dircolors ~/.dir_colors`
-alias ls="ls -la --color"
+alias ls="ls --color=auto"
 export PS1='\[\e[0;33m\][\u@\h \W]\$\[\e[m\]'
 
 # Unset local variables
@@ -96,5 +96,10 @@ unset fn_cmd
 unset EXPORT_FUNCTIONS
 unset BASHRC_DISPATCH_PID
 unset PRF
+
+# enable bash completion in interactive shells
+if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+  . /etc/bash_completion
+fi
 
 export PATH=$PATH:/home/xliu102/.linuxbrew/bin/
