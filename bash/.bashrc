@@ -102,4 +102,4 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
   . /etc/bash_completion
 fi
 
-export PATH=$PATH:/home/xliu102/.linuxbrew/bin/
+source ~/.profile

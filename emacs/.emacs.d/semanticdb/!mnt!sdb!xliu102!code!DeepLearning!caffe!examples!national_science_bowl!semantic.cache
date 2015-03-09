@@ -1,0 +1,117 @@
+;; Object national_science_bowl/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "national_science_bowl/"
+  :tables (list 
+   (semanticdb-table "classfiication_test.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("os" include nil nil [20 29])
+            ("glob" include nil nil [30 41])
+            ("pandas" include nil nil [42 61])
+            ("caffe_root" variable nil nil [63 84])
+            ("sys" include nil nil [85 95])
+            ("sys" code nil nil [96 137])
+            ("caffe" include nil nil [139 151])
+            ("MODEL_FILE" variable nil nil [153 189])
+            ("PRETRAINED" variable nil nil [190 226])
+            ("IMG_DIR" variable nil nil [227 293])
+            ("LABEL_LIST_FILE" variable nil nil [376 453])
+            ("caffe" code nil nil [488 498])
+            ("caffe" code nil nil [499 519])
+            ("net" variable nil nil [521 732])
+            ("fnames" variable nil nil [734 784])
+            ("test_img_number" variable nil nil [785 814])
+            ("labelfp" variable nil nil [816 852])
+            ("classnames" variable nil nil [853 880])
+            ("labels" variable nil nil [881 918])
+            ("label_num" variable nil nil [919 942])
+            ("images" variable nil nil [944 1006])
+            ("pred" variable nil nil [1008 1053])
+            ("idx" variable nil nil [1055 1062])
+            ("report" variable nil nil [1063 1126])
+            ("for" code nil nil [1127 1624])
+            ("df" variable nil nil [1663 1720])
+            ("df" variable nil nil [1721 1744])
+            ("df" code nil nil [1745 1772]))          
+    :file "classfiication_test.py"
+    :pointmax 1773
+    :fsize 1772
+    :lastmodtime '(21740 5949 857991 675000)
+    :unmatched-syntax '((INDENT_BLOCK 1568 . 1624) (NEWLINE 1567 . 1568) (COLON 1566 . 1567) (TRY 1155 . 1158) (AS 1562 . 1564))
+    )
+   (semanticdb-table "convert_binaryproto_npy.py"
+    :major-mode 'python-mode
+    :tags nil
+    :file "convert_binaryproto_npy.py"
+    :pointmax 1
+    :fsize 462
+    :lastmodtime '(21726 51162 654278 252000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "test.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("os" include nil nil [20 29])
+            ("glob" include nil nil [30 41])
+            ("pandas" include nil nil [42 61])
+            ("caffe_root" variable nil nil [63 84])
+            ("sys" include nil nil [85 95])
+            ("sys" code nil nil [96 137])
+            ("caffe" include nil nil [139 151])
+            ("MODEL_FILE" variable nil nil [153 199])
+            ("PRETRAINED" variable nil nil [200 236])
+            ("caffe" code nil nil [238 248])
+            ("caffe" code nil nil [249 269])
+            ("net" variable nil nil [271 322])
+            ("prediction" variable nil nil [324 350])
+            ("print" code nil nil [352 382]))          
+    :file "test.py"
+    :pointmax 389
+    :fsize 382
+    :lastmodtime '(21739 44995 29313 377000)
+    :unmatched-syntax '(($EOI 389 . 389) ($EOI 380 . 380))
+    )
+   (semanticdb-table "classification_batch.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("os" include nil nil [20 29])
+            ("glob" include nil nil [30 41])
+            ("pandas" include nil nil [42 61])
+            ("matplotlib" include nil nil [62 79])
+            ("matplotlib" code nil nil [80 101])
+            ("caffe_root" variable nil nil [103 124])
+            ("sys" include nil nil [125 135])
+            ("sys" code nil nil [137 178])
+            ("caffe" include nil nil [179 191])
+            ("MODEL_FILE" variable nil nil [193 239])
+            ("PRETRAINED" variable nil nil [240 276])
+            ("LABEL_LIST_FILE" variable nil nil [277 354])
+            ("IMG_DIR" variable nil nil [355 421])
+            ("init_caffe" function (:arguments 
+              ( ("modelfile" variable nil (reparse-symbol function_parameters) [438 447])
+                ("pretrained" variable nil (reparse-symbol function_parameters) [449 459])
+                ("batchsize" variable nil (reparse-symbol function_parameters) [461 470]))              ) nil [423 575])
+            ("init_labels" function (:arguments 
+              ( ("label_list_file" variable nil (reparse-symbol function_parameters) [592 607]))              ) nil [576 785])
+            ("init_image_list" function (:arguments 
+              ( ("img_dir" variable nil (reparse-symbol function_parameters) [806 813])
+                ("extension" variable nil (reparse-symbol function_parameters) [815 824]))              ) nil [786 947])
+            ("get_image_names" function (:arguments 
+              ( ("fnames" variable nil (reparse-symbol function_parameters) [968 974]))              ) nil [948 1135])
+            ("math" include nil nil [1164 1175])
+            ("ConfigParser" include nil nil [1176 1195])
+            ("if" code nil nil [1196 3320]))          
+    :file "classification_batch.py"
+    :pointmax 3318
+    :fsize 3319
+    :lastmodtime '(21742 29213 41943 426000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!mnt!sdb!xliu102!code!DeepLearning!caffe!examples!national_science_bowl!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

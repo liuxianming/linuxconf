@@ -1,0 +1,52 @@
+;; Object National_Data_Science_Bowl/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "National_Data_Science_Bowl/"
+  :tables (list 
+   (semanticdb-table "data_preprocessing.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("skimage.io" include nil nil [44 73])
+            ("skimage.io" include nil nil [74 103])
+            ("skimage.transform" include nil nil [104 140])
+            ("skimage.transform" include nil nil [141 177])
+            ("sklearn.ensemble" include nil nil [178 235])
+            ("glob" include nil nil [236 247])
+            ("os" include nil nil [248 257])
+            ("sklearn.cross_validation" include nil nil [258 319])
+            ("skimage" include nil nil [320 347])
+            ("skimage" include nil nil [348 378])
+            ("numpy" include nil nil [379 397])
+            ("pandas" include nil nil [398 417])
+            ("warnings" include nil nil [419 434])
+            ("warnings" code nil nil [435 468])
+            ("getLargestRegion" function (:arguments 
+              ( ("props" variable nil (reparse-symbol function_parameters) [491 496])
+                ("labelmap" variable nil (reparse-symbol function_parameters) [498 506])
+                ("imagethres" variable nil (reparse-symbol function_parameters) [508 518]))              ) nil [470 941])
+            ("getImageLargestRegion" function (:arguments 
+              ( ("image" variable nil (reparse-symbol function_parameters) [968 973]))              ) nil [942 1500])
+            ("readimage" function (:arguments 
+              ( ("nameFileImage" variable nil (reparse-symbol function_parameters) [1515 1528])
+                ("imsize" variable nil (reparse-symbol function_parameters) [1530 1536])
+                ("crop" variable nil (reparse-symbol function_parameters) [1540 1544]))              ) nil [1501 1925])
+            ("convert_dir" function (:arguments 
+              ( ("rootdir" variable nil (reparse-symbol function_parameters) [1943 1950])
+                ("imsize" variable nil (reparse-symbol function_parameters) [1952 1958])
+                ("crop" variable nil (reparse-symbol function_parameters) [1962 1966])
+                ("rotation" variable nil (reparse-symbol function_parameters) [1973 1981]))              ) nil [1927 3324])
+            ("rotate_image" function (:arguments 
+              ( ("im" variable nil (reparse-symbol function_parameters) [3343 3345])
+                ("rotation" variable nil (reparse-symbol function_parameters) [3347 3355]))              ) nil [3326 3702])
+            ("argparse" include nil nil [3725 3740])
+            ("if" code nil nil [3741 4687]))          
+    :file "data_preprocessing.py"
+    :pointmax 4688
+    :fsize 4559
+    :lastmodtime '(21741 21477 808067 317000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!mnt!sdb!xliu102!data!National_Data_Science_Bowl!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

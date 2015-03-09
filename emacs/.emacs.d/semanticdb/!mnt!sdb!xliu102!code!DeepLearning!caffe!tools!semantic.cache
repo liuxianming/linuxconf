@@ -1,0 +1,97 @@
+;; Object tools/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "tools/"
+  :tables (list 
+   (semanticdb-table "convert_imageset.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("algorithm" include (:system-flag t) nil [365 385])
+            ("fstream" include (:system-flag t) nil [386 404])
+            ("string" include (:system-flag t) nil [437 454])
+            ("utility" include (:system-flag t) nil [455 473])
+            ("vector" include (:system-flag t) nil [474 491])
+            ("boost/scoped_ptr.hpp" include nil nil [493 524])
+            ("gflags/gflags.h" include nil nil [525 551])
+            ("glog/logging.h" include nil nil [552 577])
+            ("caffe/proto/caffe.pb.h" include nil nil [579 612])
+            ("caffe/util/db.hpp" include nil nil [613 641])
+            ("caffe/util/io.hpp" include nil nil [642 670])
+            ("caffe/util/rng.hpp" include nil nil [671 700])
+            ("caffe" using (:type ("caffe" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [702 724])
+            ("std::pair" using (:type ("std::pair" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [754 770])
+            ("boost::scoped_ptr" using (:type ("boost::scoped_ptr" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [771 795])
+            ("DEFINE_bool" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("gray" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [809 814])
+                    ("" variable (:type ("false" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [815 821]))                  
+                :type "int")
+                nil [797 884])
+            ("DEFINE_bool" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("shuffle" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [897 905])
+                    ("" variable (:type ("false" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [906 912]))                  
+                :type "int")
+                nil [885 974])
+            ("DEFINE_string" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("backend" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [989 997]))                  
+                :type "int")
+                nil [975 1068])
+            ("DEFINE_int32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("resize_width" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1082 1095]))                  
+                :type "int")
+                nil [1069 1130])
+            ("DEFINE_int32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("resize_height" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1144 1158]))                  
+                :type "int")
+                nil [1131 1194])
+            ("DEFINE_bool" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("check_size" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1207 1218])
+                    ("" variable (:type ("false" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1219 1225]))                  
+                :type "int")
+                nil [1195 1301])
+            ("DEFINE_bool" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("encoded" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1314 1322])
+                    ("" variable (:type ("false" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1323 1329]))                  
+                :type "int")
+                nil [1302 1401])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [1412 1421])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1422 1434]))                  
+                :type "int")
+                nil [1403 4606]))          
+    :file "convert_imageset.cpp"
+    :pointmax 4607
+    :fsize 4606
+    :lastmodtime '(21720 12195 162738 168000)
+    :unmatched-syntax '((string 1334 . 1399) (string 1230 . 1299) (string 1162 . 1192) (number 1159 . 1160) (string 1099 . 1128) (number 1096 . 1097) (string 1014 . 1066) (string 998 . 1004) (string 917 . 972) (string 826 . 882))
+    )
+   )
+  :file "!mnt!sdb!xliu102!code!DeepLearning!caffe!tools!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

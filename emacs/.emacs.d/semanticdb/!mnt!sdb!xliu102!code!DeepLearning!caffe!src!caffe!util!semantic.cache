@@ -1,0 +1,437 @@
+;; Object util/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "util/"
+  :tables (list 
+   (semanticdb-table "io.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("fcntl.h" include (:system-flag t) nil [1 19])
+            ("google/protobuf/io/coded_stream.h" include (:system-flag t) nil [20 64])
+            ("google/protobuf/io/zero_copy_stream_impl.h" include (:system-flag t) nil [65 118])
+            ("google/protobuf/text_format.h" include (:system-flag t) nil [119 159])
+            ("opencv2/core/core.hpp" include (:system-flag t) nil [160 192])
+            ("opencv2/highgui/highgui.hpp" include (:system-flag t) nil [193 231])
+            ("opencv2/highgui/highgui_c.h" include (:system-flag t) nil [232 270])
+            ("opencv2/imgproc/imgproc.hpp" include (:system-flag t) nil [271 309])
+            ("stdint.h" include (:system-flag t) nil [310 329])
+            ("algorithm" include (:system-flag t) nil [331 351])
+            ("fstream" include (:system-flag t) nil [352 370])
+            ("string" include (:system-flag t) nil [403 420])
+            ("vector" include (:system-flag t) nil [421 438])
+            ("caffe/common.hpp" include nil nil [440 467])
+            ("caffe/proto/caffe.pb.h" include nil nil [468 501])
+            ("caffe/util/io.hpp" include nil nil [502 530])
+            ("kProtoReadBytesLimit" variable
+               (:constant-flag t
+                :type "int")
+                nil [532 573])
+            ("caffe" type
+               (:members 
+                  ( ("google::protobuf::io::FileInputStream" using (:type ("google::protobuf::io::FileInputStream" type
+                         (:prototype t
+                          :type "class")
+                          nil nil)) (reparse-symbol namespacesubparts) [629 673])
+                    ("google::protobuf::io::FileOutputStream" using (:type ("google::protobuf::io::FileOutputStream" type
+                         (:prototype t
+                          :type "class")
+                          nil nil)) (reparse-symbol namespacesubparts) [674 719])
+                    ("google::protobuf::io::ZeroCopyInputStream" using (:type ("google::protobuf::io::ZeroCopyInputStream" type
+                         (:prototype t
+                          :type "class")
+                          nil nil)) (reparse-symbol namespacesubparts) [720 768])
+                    ("google::protobuf::io::CodedInputStream" using (:type ("google::protobuf::io::CodedInputStream" type
+                         (:prototype t
+                          :type "class")
+                          nil nil)) (reparse-symbol namespacesubparts) [769 814])
+                    ("google::protobuf::io::ZeroCopyOutputStream" using (:type ("google::protobuf::io::ZeroCopyOutputStream" type
+                         (:prototype t
+                          :type "class")
+                          nil nil)) (reparse-symbol namespacesubparts) [815 864])
+                    ("google::protobuf::io::CodedOutputStream" using (:type ("google::protobuf::io::CodedOutputStream" type
+                         (:prototype t
+                          :type "class")
+                          nil nil)) (reparse-symbol namespacesubparts) [865 911])
+                    ("google::protobuf::Message" using (:type ("google::protobuf::Message" type
+                         (:prototype t
+                          :type "class")
+                          nil nil)) (reparse-symbol namespacesubparts) [912 944])
+                    ("ReadProtoFromTextFile" function
+                       (:arguments 
+                          ( ("filename" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [973 994])
+                            ("proto" variable
+                               (:pointer 1
+                                :type ("Message" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [995 1010]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [946 1272])
+                    ("WriteProtoToTextFile" function
+                       (:arguments 
+                          ( ("proto" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Message" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1300 1321])
+                            ("filename" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1322 1343]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1274 1556])
+                    ("ReadProtoFromBinaryFile" function
+                       (:arguments 
+                          ( ("filename" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1587 1608])
+                            ("proto" variable
+                               (:pointer 1
+                                :type ("Message" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1609 1624]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [1558 2048])
+                    ("WriteProtoToBinaryFile" function
+                       (:arguments 
+                          ( ("proto" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Message" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2078 2099])
+                            ("filename" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [2100 2121]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2050 2234])
+                    ("ReadImageToCVMat" function
+                       (:arguments 
+                          ( ("filename" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2261 2284])
+                            ("height" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [2289 2306])
+                            ("width" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [2307 2323])
+                            ("is_color" variable
+                               (:constant-flag t
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [2324 2344]))                          
+                        :type ("cv::Mat" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2236 2791])
+                    ("ReadImageToCVMat" function
+                       (:arguments 
+                          ( ("filename" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2818 2841])
+                            ("height" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [2846 2863])
+                            ("width" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [2864 2880]))                          
+                        :type ("cv::Mat" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2793 2942])
+                    ("ReadImageToCVMat" function
+                       (:arguments 
+                          ( ("filename" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2969 2992])
+                            ("is_color" variable
+                               (:constant-flag t
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [2997 3017]))                          
+                        :type ("cv::Mat" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2944 3074])
+                    ("ReadImageToCVMat" function
+                       (:arguments 
+                          ( ("filename" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3101 3124]))                          
+                        :type ("cv::Mat" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [3076 3177])
+                    ("ReadImageToDatum" function
+                       (:arguments 
+                          ( ("filename" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3201 3224])
+                            ("label" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [3225 3241])
+                            ("height" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [3246 3263])
+                            ("width" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [3264 3280])
+                            ("is_color" variable
+                               (:constant-flag t
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [3281 3301])
+                            ("datum" variable
+                               (:pointer 1
+                                :type ("Datum" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3302 3315]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [3179 3524])
+                    ("ReadFileToDatum" function
+                       (:arguments 
+                          ( ("filename" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3547 3570])
+                            ("label" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [3571 3587])
+                            ("datum" variable
+                               (:pointer 1
+                                :type ("Datum" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3592 3605]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [3526 3999])
+                    ("DecodeDatumToCVMat" function
+                       (:arguments 
+                          ( ("datum" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Datum" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4028 4047])
+                            ("height" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [4052 4069])
+                            ("width" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [4070 4086])
+                            ("is_color" variable
+                               (:constant-flag t
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [4087 4107]))                          
+                        :type ("cv::Mat" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [4001 4698])
+                    ("DecodeDatumToCVMat" function
+                       (:arguments 
+                          ( ("datum" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Datum" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4727 4746])
+                            ("height" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [4751 4768])
+                            ("width" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [4769 4785]))                          
+                        :type ("cv::Mat" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [4700 4846])
+                    ("DecodeDatumToCVMat" function
+                       (:arguments 
+                          ( ("datum" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Datum" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4875 4894])
+                            ("is_color" variable
+                               (:constant-flag t
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [4899 4919]))                          
+                        :type ("cv::Mat" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [4848 4975])
+                    ("DecodeDatumToCVMat" function
+                       (:arguments 
+                          ( ("datum" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Datum" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5004 5023]))                          
+                        :type ("cv::Mat" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [4977 5075])
+                    ("DecodeDatum" function
+                       (:arguments 
+                          ( ("height" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [5264 5281])
+                            ("width" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [5282 5298])
+                            ("is_color" variable
+                               (:constant-flag t
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [5299 5319])
+                            ("datum" variable
+                               (:pointer 1
+                                :type ("Datum" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5336 5349]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [5247 5538])
+                    ("CVMatToDatum" function
+                       (:arguments 
+                          ( ("cv_img" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("cv::Mat" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5558 5580])
+                            ("datum" variable
+                               (:pointer 1
+                                :type ("Datum" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5581 5594]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [5540 6468])
+                    ("hdf5_load_nd_dataset_helper" function
+                       (:template 
+                          ( ("Dtype" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("file_id" variable (:type ("hid_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6612 6626])
+                            ("dataset_name_" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [6627 6653])
+                            ("min_dim" variable (:type "int") (reparse-symbol arg-sub-list) [6654 6666])
+                            ("max_dim" variable (:type "int") (reparse-symbol arg-sub-list) [6667 6679])
+                            ("blob" variable
+                               (:pointer 1
+                                :type ("Blob" type
+                                     (:template-specifier 
+                                        ( ("Dtype" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [6684 6702]))                          )
+                        (reparse-symbol namespacesubparts) [6548 7655])
+                    ("hdf5_load_nd_dataset" function
+                       (:type "void"
+                        :arguments 
+                          ( ("file_id" variable (:type ("hid_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7702 7716])
+                            ("dataset_name_" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [7717 7743])
+                            ("min_dim" variable (:type "int") (reparse-symbol arg-sub-list) [7752 7764])
+                            ("max_dim" variable (:type "int") (reparse-symbol arg-sub-list) [7765 7777])
+                            ("blob" variable
+                               (:pointer 1
+                                :type ("Blob" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [7778 7796]))                          
+                        :template-specifier 
+                          ( ("float" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [7657 8051])
+                    ("hdf5_load_nd_dataset" function
+                       (:type "void"
+                        :arguments 
+                          ( ("file_id" variable (:type ("hid_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8099 8113])
+                            ("dataset_name_" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [8114 8140])
+                            ("min_dim" variable (:type "int") (reparse-symbol arg-sub-list) [8149 8161])
+                            ("max_dim" variable (:type "int") (reparse-symbol arg-sub-list) [8162 8174])
+                            ("blob" variable
+                               (:pointer 1
+                                :type ("Blob" type
+                                     (:template-specifier 
+                                        ( ("double" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [8175 8194]))                          
+                        :template-specifier 
+                          ( ("double" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [8053 8451])
+                    ("hdf5_save_nd_dataset" function
+                       (:type "void"
+                        :arguments 
+                          ( ("file_id" variable
+                               (:constant-flag t
+                                :type ("hid_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8503 8523])
+                            ("dataset_name" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8524 8551])
+                            ("blob" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Blob" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [8552 8576]))                          
+                        :template-specifier 
+                          ( ("float" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [8453 8909])
+                    ("hdf5_save_nd_dataset" function
+                       (:type "void"
+                        :arguments 
+                          ( ("file_id" variable
+                               (:constant-flag t
+                                :type ("hid_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8962 8982])
+                            ("dataset_name" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8983 9010])
+                            ("blob" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Blob" type
+                                     (:template-specifier 
+                                        ( ("double" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [9011 9036]))                          
+                        :template-specifier 
+                          ( ("double" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [8911 9371]))                  
+                :type "namespace")
+                nil [610 9374]))          
+    :file "io.cpp"
+    :pointmax 9395
+    :fsize 9394
+    :lastmodtime '(21698 39039 383916 771000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!mnt!sdb!xliu102!code!DeepLearning!caffe!src!caffe!util!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

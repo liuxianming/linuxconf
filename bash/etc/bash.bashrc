@@ -63,28 +63,4 @@ if [ -x /usr/lib/command-not-found -o -x /usr/share/command-not-found/command-no
 	}
 fi
 
-# Set path for CUDA
-PATH=/usr/local/cuda/bin:$PATH
-#PATH=/usr/local/cuda-6.0/bin:$PATH
-PATH=/usr/local/MATLAB/R2014b/bin:$PATH
-PATH=/usr/local/pycharm/bin:$PATH
-
-# LIB Path
-LD_LIBRARY_PATH=/usr/lib:$LD_LIBRARY_PATH
-# LIBPATH FOR CUDA
-LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
-LD_LIBRARY_PATH=/usr/local/cuda/lib:$LD_LIBRARY_PATH
-LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
-
-# Add opencv 
-export LD_LIBRARY_PATH="/usr/local/opencv243/build/lib:$LD_LIBRARY_PATH"
-
-# python libs
-export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
-# export PYTHONPATH="/home/xliu102/anaconda/lib/python2.7/site-packages/:$PYTHONPATH"
-export PYTHONPATH="/usr/local/opencv243/build/lib/python2.7/site-packages:$PYTHONPATH"
-
-export CUDA_ROOT="/usr/local/cuda/"
-
-# Insert support to Intel MKL / TBB etc
-source /opt/intel/bin/compilervars.sh intel64
+source /etc/profile

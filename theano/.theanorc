@@ -1,0 +1,12 @@
+[global]
+floatX = float32
+device = gpu
+
+[nvcc]
+fastmath = True
+
+[blas]
+ldflags = -L/opt/intel/mkl/lib/intel64/ -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core -lpthread -lm
+
+[cuda]
+root = /usr/local/cuda/

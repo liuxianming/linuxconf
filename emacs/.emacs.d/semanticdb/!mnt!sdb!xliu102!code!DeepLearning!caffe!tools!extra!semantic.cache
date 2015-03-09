@@ -1,0 +1,63 @@
+;; Object extra/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "extra/"
+  :tables (list 
+   (semanticdb-table "plot_training_log.py.example"
+    :major-mode 'python-mode
+    :tags 
+        '( ("inspect" include nil nil [23 37])
+            ("os" include nil nil [38 47])
+            ("random" include nil nil [48 61])
+            ("sys" include nil nil [62 72])
+            ("matplotlib.cm" include nil nil [73 100])
+            ("matplotlib.colors" include nil nil [101 135])
+            ("matplotlib.pyplot" include nil nil [136 167])
+            ("matplotlib.legend" include nil nil [168 199])
+            ("matplotlib.markers" include nil nil [200 232])
+            ("get_log_parsing_script" function nil nil [234 389])
+            ("get_log_file_suffix" function nil nil [390 435])
+            ("get_chart_type_description_separator" function nil nil [436 500])
+            ("is_x_axis_field" function (:arguments 
+              ( ("field" variable nil (reparse-symbol function_parameters) [521 526]))              ) nil [501 604])
+            ("create_field_index" function nil nil [605 1159])
+            ("get_supported_chart_types" function nil nil [1160 1681])
+            ("get_chart_type_description" function (:arguments 
+              ( ("chart_type" variable nil (reparse-symbol function_parameters) [1713 1723]))              ) nil [1682 1879])
+            ("get_data_file_type" function (:arguments 
+              ( ("chart_type" variable nil (reparse-symbol function_parameters) [1903 1913]))              ) nil [1880 2043])
+            ("get_data_file" function (:arguments 
+              ( ("chart_type" variable nil (reparse-symbol function_parameters) [2062 2072])
+                ("path_to_log" variable nil (reparse-symbol function_parameters) [2074 2085]))              ) nil [2044 2176])
+            ("get_field_descriptions" function (:arguments 
+              ( ("chart_type" variable nil (reparse-symbol function_parameters) [2204 2214]))              ) nil [2177 2439])
+            ("get_field_indecies" function (:arguments 
+              ( ("x_axis_field" variable nil (reparse-symbol function_parameters) [2463 2475])
+                ("y_axis_field" variable nil (reparse-symbol function_parameters) [2477 2489]))              ) nil [2440 2655])
+            ("load_data" function (:arguments 
+              ( ("data_file" variable nil (reparse-symbol function_parameters) [2670 2679])
+                ("field_idx0" variable nil (reparse-symbol function_parameters) [2681 2691])
+                ("field_idx1" variable nil (reparse-symbol function_parameters) [2693 2703]))              ) nil [2656 3034])
+            ("random_marker" function nil nil [3035 3196])
+            ("get_data_label" function (:arguments 
+              ( ("path_to_log" variable nil (reparse-symbol function_parameters) [3216 3227]))              ) nil [3197 3349])
+            ("get_legend_loc" function (:arguments 
+              ( ("chart_type" variable nil (reparse-symbol function_parameters) [3369 3379]))              ) nil [3350 3628])
+            ("plot_chart" function (:arguments 
+              ( ("chart_type" variable nil (reparse-symbol function_parameters) [3644 3654])
+                ("path_to_png" variable nil (reparse-symbol function_parameters) [3656 3667])
+                ("path_to_log_list" variable nil (reparse-symbol function_parameters) [3669 3685]))              ) nil [3629 5186])
+            ("print_help" function nil nil [5187 6068])
+            ("is_valid_chart_type" function (:arguments 
+              ( ("chart_type" variable nil (reparse-symbol function_parameters) [6093 6103]))              ) nil [6069 6183])
+            ("if" code nil nil [6186 6958]))          
+    :file "plot_training_log.py.example"
+    :pointmax 6958
+    :fsize 6957
+    :lastmodtime '(21521 5286 978406 790000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!mnt!sdb!xliu102!code!DeepLearning!caffe!tools!extra!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

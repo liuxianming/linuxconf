@@ -1,0 +1,608 @@
+;; Object caffe/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "caffe/"
+  :tables (list 
+   (semanticdb-table "io.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("skimage.io" include nil nil [20 37])
+            ("scipy.ndimage" include nil nil [38 68])
+            ("skimage.transform" include nil nil [69 105])
+            ("caffe.proto" include nil nil [107 140])
+            ("load_image" function
+               (:documentation "
+    Load an image converting from grayscale or alpha as needed.
+
+    Take
+    filename: string
+    color: flag for color format. True (default) loads as RGB while False
+        loads as intensity (if image is already grayscale).
+
+    Give
+    image: an image with type np.float32 in range [0, 1]
+        of size (H x W x 3) in RGB or
+        of size (H x W x 1) in grayscale.
+    "
+                :arguments 
+                  ( ("filename" variable nil (reparse-symbol function_parameters) [158 166])
+                    ("color" variable nil (reparse-symbol function_parameters) [168 173]))                  )
+                nil [143 841])
+            ("resize_image" function
+               (:documentation "
+    Resize an image array with interpolation.
+
+    Take
+    im: (H x W x K) ndarray
+    new_dims: (height, width) tuple of new dimensions.
+    interp_order: interpolation order, default is linear.
+
+    Give
+    im: resized ndarray with shape (new_dims[0], new_dims[1], K)
+    "
+                :arguments 
+                  ( ("im" variable nil (reparse-symbol function_parameters) [860 862])
+                    ("new_dims" variable nil (reparse-symbol function_parameters) [864 872])
+                    ("interp_order" variable nil (reparse-symbol function_parameters) [874 886]))                  )
+                nil [843 2024])
+            ("oversample" function
+               (:documentation "
+    Crop images into the four corners, center, and their mirrored versions.
+
+    Take
+    image: iterable of (H x W x K) ndarrays
+    crop_dims: (height, width) tuple for the crops.
+
+    Give
+    crops: (10*N x H x W x K) ndarray of crops for number of inputs N.
+    "
+                :arguments 
+                  ( ("images" variable nil (reparse-symbol function_parameters) [2041 2047])
+                    ("crop_dims" variable nil (reparse-symbol function_parameters) [2049 2058]))                  )
+                nil [2026 3357])
+            ("blobproto_to_array" function
+               (:documentation "Convert a blob proto to an array. In default, we will just return the data,
+  unless return_diff is True, in which case we will return the diff.
+  "
+                :arguments 
+                  ( ("blob" variable nil (reparse-symbol function_parameters) [3382 3386])
+                    ("return_diff" variable nil (reparse-symbol function_parameters) [3388 3399]))                  )
+                nil [3359 3786])
+            ("array_to_blobproto" function
+               (:documentation "Converts a 4-dimensional array to blob proto. If diff is given, also
+  convert the diff. You need to make sure that arr and diff have the same
+  shape, and this function does not do sanity check.
+  "
+                :arguments 
+                  ( ("arr" variable nil (reparse-symbol function_parameters) [3811 3814])
+                    ("diff" variable nil (reparse-symbol function_parameters) [3816 3820]))                  )
+                nil [3788 4323])
+            ("arraylist_to_blobprotovecor_str" function
+               (:documentation "Converts a list of arrays to a serialized blobprotovec, which could be
+  then passed to a network for processing.
+  "
+                :arguments 
+                  ( ("arraylist" variable nil (reparse-symbol function_parameters) [4361 4370]))                  )
+                nil [4325 4634])
+            ("blobprotovector_str_to_arraylist" function
+               (:documentation "Converts a serialized blobprotovec to a list of arrays.
+  "
+                :arguments 
+                  ( ("str" variable nil (reparse-symbol function_parameters) [4673 4676]))                  )
+                nil [4636 4867])
+            ("array_to_datum" function
+               (:documentation "Converts a 3-dimensional array to datum. If the array has dtype uint8,
+  the output data will be encoded as a string. Otherwise, the output data
+  will be stored in float format.
+  "
+                :arguments 
+                  ( ("arr" variable nil (reparse-symbol function_parameters) [4888 4891])
+                    ("label" variable nil (reparse-symbol function_parameters) [4893 4898]))                  )
+                nil [4869 5387])
+            ("datum_to_array" function
+               (:documentation "Converts a datum to an array. Note that the label is not returned,
+  as one can easily get it by calling datum.label.
+  "
+                :arguments 
+                  ( ("datum" variable nil (reparse-symbol function_parameters) [5408 5413]))                  )
+                nil [5389 5802]))          
+    :file "io.py"
+    :pointmax 5802
+    :fsize 11730
+    :lastmodtime '(21738 43678 27601 607000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "classifier.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("\"\"\"
+Classifier is an image classifier specialization of Net.
+\"\"\"" code nil nil [23 87])
+            ("numpy" include nil nil [89 107])
+            ("caffe" include nil nil [109 121])
+            ("Classifier" type
+               (:documentation "
+    Classifier extends Net for image class prediction
+    by scaling, center cropping, or oversampling.
+    "
+                :superclasses ("caffe.Net")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Take
+        image_dims: dimensions to scale input for cropping/sampling.
+            Default is to scale to net input size for whole-image crop.
+            mean, input_scale, raw_scale, channel_swap: params for
+            preprocessing options.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [449 720])
+                            ("caffe" code nil (reparse-symbol indented_block_body) [729 794])
+                            ("in_" variable nil (reparse-symbol indented_block_body) [839 859])
+                            ("self" variable nil (reparse-symbol indented_block_body) [868 978])
+                            ("self" code nil (reparse-symbol indented_block_body) [987 1031])
+                            ("if" code nil (reparse-symbol indented_block_body) [1040 1110])
+                            ("if" code nil (reparse-symbol indented_block_body) [1118 1209])
+                            ("if" code nil (reparse-symbol indented_block_body) [1217 1302])
+                            ("if" code nil (reparse-symbol indented_block_body) [1310 1404])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1413 1470])
+                            ("if" code nil (reparse-symbol indented_block_body) [1479 1538])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1546 1574]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [290 294])
+                            ("model_file" variable nil (reparse-symbol function_parameters) [296 306])
+                            ("pretrained_file" variable nil (reparse-symbol function_parameters) [308 323])
+                            ("image_dims" variable nil (reparse-symbol function_parameters) [325 335])
+                            ("mean" variable nil (reparse-symbol function_parameters) [359 363])
+                            ("input_scale" variable nil (reparse-symbol function_parameters) [370 381])
+                            ("raw_scale" variable nil (reparse-symbol function_parameters) [388 397])
+                            ("channel_swap" variable nil (reparse-symbol function_parameters) [421 433]))                          
+                        :documentation "
+        Take
+        image_dims: dimensions to scale input for cropping/sampling.
+            Default is to scale to net input size for whole-image crop.
+            mean, input_scale, raw_scale, channel_swap: params for
+            preprocessing options.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [277 1575])
+                    ("predict" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1593 1597])
+                            ("inputs" variable nil (reparse-symbol function_parameters) [1599 1605])
+                            ("oversample" variable nil (reparse-symbol function_parameters) [1607 1617]))                          
+                        :documentation "
+        Predict classification probabilities of inputs.
+
+        Take
+        inputs: iterable of (H x W x K) input ndarrays.
+        oversample: average predictions across center, corners, and mirrors
+                    when True (default). Center-only prediction when False.
+
+        Give
+        predictions: (N x C) ndarray of class probabilities
+                     for N images and C classes.
+        ")
+                        (reparse-symbol indented_block_body) [1581 3434]))                  
+                :type "class")
+                nil [124 3434]))          
+    :file "classifier.py"
+    :pointmax 3434
+    :fsize 3433
+    :lastmodtime '(21738 43678 27601 607000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "__init__.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("Net" include nil nil [15 36])
+            ("SGDSolver" include nil nil [15 36])
+            ("set_mode_cpu" include nil nil [50 114])
+            ("set_mode_gpu" include nil nil [50 114])
+            ("set_device" include nil nil [50 114])
+            ("Layer" include nil nil [50 114])
+            ("get_solver" include nil nil [50 114])
+            ("TRAIN" include nil nil [137 155])
+            ("TEST" include nil nil [137 155])
+            ("Classifier" include nil nil [173 190])
+            ("Detector" include nil nil [206 221])
+            ("io" include nil nil [222 231]))          
+    :file "__init__.py"
+    :pointmax 232
+    :fsize 231
+    :lastmodtime '(21738 43678 27601 607000)
+    :unmatched-syntax '((FROM 191 . 195) (PERIOD 196 . 197) (FROM 156 . 160) (PERIOD 161 . 162) (FROM 115 . 119) (PERIOD 120 . 121) (FROM 37 . 41) (PERIOD 42 . 43) (PERIOD 6 . 7))
+    )
+   (semanticdb-table "pycaffe.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("\"\"\"
+Wrap the internal caffe C++ module (_caffe.so) with a clean, Pythonic
+interface.
+\"\"\"" code nil nil [1 89])
+            ("collections" include nil nil [91 126])
+            ("itertools" include nil nil [127 161])
+            ("numpy" include nil nil [162 180])
+            ("Net" include nil nil [195 216])
+            ("SGDSolver" include nil nil [195 216])
+            ("caffe.io" include nil nil [217 232])
+            ("_Net_blobs" function
+               (:parent "dummy"
+                :decorators 
+                  ( ("property" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("self" variable nil (reparse-symbol function_parameters) [454 458]))                  
+                :documentation "
+    An OrderedDict (bottom to top, i.e., input to output) of network
+    blobs indexed by name
+    ")
+                nil [429 631])
+            ("_Net_params" function
+               (:parent "dummy"
+                :decorators 
+                  ( ("property" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("self" variable nil (reparse-symbol function_parameters) [659 663]))                  
+                :documentation "
+    An OrderedDict (bottom to top, i.e., input to output) of network
+    parameters indexed by name; each is a list of multiple blobs (e.g.,
+    weights and biases)
+    ")
+                nil [633 1011])
+            ("_Net_inputs" function
+               (:parent "dummy"
+                :arguments 
+                  ( ("self" variable nil (reparse-symbol function_parameters) [1039 1043]))                  
+                :decorators 
+                  ( ("property" function (:type "decorator") nil nil))                  )
+                nil [1013 1102])
+            ("_Net_outputs" function
+               (:parent "dummy"
+                :arguments 
+                  ( ("self" variable nil (reparse-symbol function_parameters) [1131 1135]))                  
+                :decorators 
+                  ( ("property" function (:type "decorator") nil nil))                  )
+                nil [1104 1195])
+            ("_Net_forward" function
+               (:parent "dummy"
+                :arguments 
+                  ( ("self" variable nil (reparse-symbol function_parameters) [1214 1218])
+                    ("blobs" variable nil (reparse-symbol function_parameters) [1220 1225])
+                    ("start" variable nil (reparse-symbol function_parameters) [1232 1237])
+                    ("end" variable nil (reparse-symbol function_parameters) [1244 1247])
+                    ("kwargs" variable nil (reparse-symbol function_parameters) [1254 1262]))                  
+                :documentation "
+    Forward pass: prepare inputs and run the net forward.
+
+    Take
+    blobs: list of blobs to return in addition to output blobs.
+    kwargs: Keys are input blob names and values are blob ndarrays.
+            For formatting inputs for Caffe, see Net.preprocess().
+            If None, input is taken from data layers.
+    start: optional name of layer at which to begin the forward pass
+    end: optional name of layer at which to finish the forward pass (inclusive)
+
+    Give
+    outs: {blob name: blob ndarray} dict.
+    ")
+                nil [1197 2856])
+            ("_Net_backward" function
+               (:parent "dummy"
+                :arguments 
+                  ( ("self" variable nil (reparse-symbol function_parameters) [2876 2880])
+                    ("diffs" variable nil (reparse-symbol function_parameters) [2882 2887])
+                    ("start" variable nil (reparse-symbol function_parameters) [2894 2899])
+                    ("end" variable nil (reparse-symbol function_parameters) [2906 2909])
+                    ("kwargs" variable nil (reparse-symbol function_parameters) [2916 2924]))                  
+                :documentation "
+    Backward pass: prepare diffs and run the net backward.
+
+    Take
+    diffs: list of diffs to return in addition to bottom diffs.
+    kwargs: Keys are output blob names and values are diff ndarrays.
+            If None, top diffs are taken from forward loss.
+    start: optional name of layer at which to begin the backward pass
+    end: optional name of layer at which to finish the backward pass (inclusive)
+
+    Give
+    outs: {blob name: diff ndarray} dict.
+    ")
+                nil [2858 4464])
+            ("_Net_forward_all" function
+               (:parent "dummy"
+                :arguments 
+                  ( ("self" variable nil (reparse-symbol function_parameters) [4487 4491])
+                    ("blobs" variable nil (reparse-symbol function_parameters) [4493 4498])
+                    ("kwargs" variable nil (reparse-symbol function_parameters) [4505 4513]))                  
+                :documentation "
+    Run net forward in batches.
+
+    Take
+    blobs: list of blobs to extract as in forward()
+    kwargs: Keys are input blob names and values are blob ndarrays.
+            Refer to forward().
+
+    Give
+    all_outs: {blob name: list of blobs} dict.
+    ")
+                nil [4466 5385])
+            ("_Net_forward_backward_all" function
+               (:parent "dummy"
+                :arguments 
+                  ( ("self" variable nil (reparse-symbol function_parameters) [5417 5421])
+                    ("blobs" variable nil (reparse-symbol function_parameters) [5423 5428])
+                    ("diffs" variable nil (reparse-symbol function_parameters) [5435 5440])
+                    ("kwargs" variable nil (reparse-symbol function_parameters) [5447 5455]))                  
+                :documentation "
+    Run net forward + backward in batches.
+
+    Take
+    blobs: list of blobs to extract as in forward()
+    diffs: list of diffs to extract as in backward()
+    kwargs: Keys are input (for forward) and output (for backward) blob names
+            and values are ndarrays. Refer to forward() and backward().
+            Prefilled variants are called for lack of input or output blobs.
+
+    Give
+    all_blobs: {blob name: blob ndarray} dict.
+    all_diffs: {blob name: diff ndarray} dict.
+    ")
+                nil [5387 7374])
+            ("_Net_set_input_arrays" function
+               (:parent "dummy"
+                :arguments 
+                  ( ("self" variable nil (reparse-symbol function_parameters) [7402 7406])
+                    ("data" variable nil (reparse-symbol function_parameters) [7408 7412])
+                    ("labels" variable nil (reparse-symbol function_parameters) [7414 7420]))                  
+                :documentation "
+    Set input arrays of the in-memory MemoryDataLayer.
+    (Note: this is only for networks declared with the memory data layer.)
+    ")
+                nil [7376 7772])
+            ("_Net_batch" function
+               (:parent "dummy"
+                :arguments 
+                  ( ("self" variable nil (reparse-symbol function_parameters) [7789 7793])
+                    ("blobs" variable nil (reparse-symbol function_parameters) [7795 7800]))                  
+                :documentation "
+    Batch blob lists according to net's batch size.
+
+    Take
+    blobs: Keys blob names and values are lists of blobs (of any length).
+           Naturally, all the lists should have the same length.
+
+    Give (yield)
+    batch: {blob name: list of blobs} dict for a single batch.
+    ")
+                nil [7774 8808])
+            ("Net" variable nil nil [8834 8856])
+            ("Net" variable nil nil [8857 8881])
+            ("Net" variable nil nil [8882 8908])
+            ("Net" variable nil nil [8909 8937])
+            ("Net" variable nil nil [8938 8972])
+            ("Net" variable nil nil [8973 9025])
+            ("Net" variable nil nil [9026 9070])
+            ("Net" variable nil nil [9071 9094])
+            ("Net" variable nil nil [9095 9119])
+            ("Net" variable nil nil [9120 9146]))          
+    :file "pycaffe.py"
+    :pointmax 9147
+    :fsize 9146
+    :lastmodtime '(21738 43678 27601 607000)
+    :unmatched-syntax '((FROM 182 . 186) (PERIOD 187 . 188))
+    )
+   (semanticdb-table "_caffe.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("Python.h" include (:system-flag t) nil [1 20])
+            ("NPY_NO_DEPRECATED_API" variable (:constant-flag t) nil [142 163])
+            ("boost/make_shared.hpp" include (:system-flag t) nil [185 217])
+            ("boost/python.hpp" include (:system-flag t) nil [218 245])
+            ("boost/python/suite/indexing/vector_indexing_suite.hpp" include (:system-flag t) nil [246 310])
+            ("numpy/arrayobject.h" include (:system-flag t) nil [311 341])
+            ("string" include (:system-flag t) nil [392 409])
+            ("vector" include (:system-flag t) nil [442 459])
+            ("fstream" include (:system-flag t) nil [492 510])
+            ("caffe/caffe.hpp" include nil nil [523 549])
+            ("caffe/python_layer.hpp" include nil nil [550 583])
+            ("NPY_ARRAY_C_CONTIGUOUS" variable (:constant-flag t) nil [745 767])
+            ("PyArray_SetBaseObject" variable (:constant-flag t) nil [793 814])
+            ("bp" type
+               (:kind alias
+                :members 
+                  ( ("boost::python" type (:type "namespace") nil nil))                  
+                :type "namespace")
+                nil [857 886])
+            ("caffe" type
+               (:members 
+                  ( ("Dtype" type
+                       (:typedef ("float")
+                        :superclasses "float"
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [972 992])
+                    ("NPY_DTYPE" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [993 1027])
+                    ("set_mode_cpu" function (:type "void") (reparse-symbol namespacesubparts) [1048 1100])
+                    ("set_mode_gpu" function (:type "void") (reparse-symbol namespacesubparts) [1101 1153])
+                    ("CheckFile" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("filename" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1443 1466]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1421 1635])
+                    ("CheckContiguousArray" function
+                       (:arguments 
+                          ( ("arr" variable
+                               (:pointer 1
+                                :type ("PyArrayObject" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1663 1682])
+                            ("name" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1683 1695])
+                            ("channels" variable (:type "int") (reparse-symbol arg-sub-list) [1700 1713])
+                            ("height" variable (:type "int") (reparse-symbol arg-sub-list) [1714 1725])
+                            ("width" variable (:type "int") (reparse-symbol arg-sub-list) [1726 1736]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1637 2372])
+                    ("Net_Init" function
+                       (:arguments 
+                          ( ("param_file" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2456 2474])
+                            ("phase" variable (:type "int") (reparse-symbol arg-sub-list) [2475 2485]))                          
+                        :type ("shared_ptr" type
+                             (:template-specifier 
+                                ( ("Net" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [2418 2621])
+                    ("Net_Init_Load" function
+                       (:arguments 
+                          ( ("param_file" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2716 2734])
+                            ("pretrained_param_file" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2735 2764])
+                            ("phase" variable (:type "int") (reparse-symbol arg-sub-list) [2765 2775]))                          
+                        :type ("shared_ptr" type
+                             (:template-specifier 
+                                ( ("Net" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [2673 3000])
+                    ("Net_Save" function
+                       (:arguments 
+                          ( ("net" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Net" type
+                                     (:template-specifier 
+                                        ( ("Dtype" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3016 3038])
+                            ("filename" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3039 3055]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [3002 3174])
+                    ("Net_SetInputArrays" function
+                       (:arguments 
+                          ( ("net" variable
+                               (:pointer 1
+                                :type ("Net" type
+                                     (:template-specifier 
+                                        ( ("Dtype" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3200 3216])
+                            ("data_obj" variable (:type ("bp::object" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3217 3237])
+                            ("labels_obj" variable (:type ("bp::object" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3242 3264]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [3176 4507])
+                    ("GetSolverFromFile" function
+                       (:pointer 1
+                        :arguments 
+                          ( ("filename" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4542 4565]))                          
+                        :type ("Solver" type
+                             (:template-specifier 
+                                ( ("Dtype" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [4509 4676])
+                    ("NdarrayConverterGenerator" type
+                       (:members 
+                          ( ("apply" type
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "struct"
+                                :prototype t)
+                                (reparse-symbol classsubparts) [4715 4750]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [4678 4753])
+                    ("apply" type
+                       (:type "struct"
+                        :members 
+                          ( ("type" type
+                               (:members 
+                                  ( ("()" function
+                                       (:operator-flag t
+                                        :pointer 1
+                                        :arguments 
+                                          ( ("data" variable
+                                               (:pointer 1
+                                                :type ("Dtype" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4859 4871]))                                          
+                                        :type ("PyObject" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [4837 5032])
+                                    ("get_pytype" function
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("PyTypeObject" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [5037 5105]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [4819 5110]))                          
+                        :template-specifier 
+                          ( ("Dtype" type (:pointer 1) nil nil))                          
+                        :parent "NdarrayConverterGenerator")
+                        (reparse-symbol namespacesubparts) [4755 5113])
+                    ("NdarrayCallPolicies" type
+                       (:superclasses 
+                          ( ("bp::default_call_policies" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("result_converter" type
+                               (:typedef ("NdarrayConverterGenerator" type (:type "class") nil nil)
+                                :superclasses "NdarrayConverterGenerator"
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [5181 5232])
+                            ("postcall" function
+                               (:pointer 1
+                                :arguments 
+                                  ( ("pyargs" variable
+                                       (:pointer 1
+                                        :type ("PyObject" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5254 5271])
+                                    ("result" variable
+                                       (:pointer 1
+                                        :type ("PyObject" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5272 5289]))                                  
+                                :type ("PyObject" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5235 6050]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [5115 6053])
+                    ("BOOST_PYTHON_MEMBER_FUNCTION_OVERLOADS" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("SolveOverloads" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6094 6109])
+                            ("" variable (:type ("Solve" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6110 6116]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [6055 6123])
+                    ("BOOST_PYTHON_MODULE" function
+                       (:arguments 
+                          ( ("" variable (:type ("_caffe" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6145 6152]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [6125 11061]))                  
+                :type "namespace")
+                nil [888 11064]))          
+    :file "_caffe.cpp"
+    :pointmax 11085
+    :fsize 11084
+    :lastmodtime '(21738 43678 27601 607000)
+    :unmatched-syntax '((number 6120 . 6121) (number 6117 . 6118))
+    :lexical-table 
+        '(("NPY_NO_DEPRECATED_API" . ((symbol "NPY_1_7_API_VERSION" 164 . 183)))
+          ("NPY_ARRAY_C_CONTIGUOUS" . ((symbol "NPY_C_CONTIGUOUS" 768 . 784)))
+          ("PyArray_SetBaseObject" (spp-arg-list ("arr" "x") 814 . 822) . ((semantic-list "(PyArray_BASE(arr) = (x))" 823 . 848)))
+          )
+
+    )
+   )
+  :file "!mnt!sdb!xliu102!code!DeepLearning!caffe!python!caffe!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )
