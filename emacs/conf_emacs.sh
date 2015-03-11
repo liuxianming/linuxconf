@@ -1,5 +1,6 @@
 cd ~;
-git clone https://github.com/redguardtoo/emacs.d.git .emacs.d
+
+git clone https://github.com/purcell/emacs.d.git ~/.emacs.d
 
 emacs -nw --batch -l ~/.emacs.d/init.el -f package-refresh-contents
 
