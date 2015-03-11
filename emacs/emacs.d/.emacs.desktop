@@ -1,0 +1,46 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Wed Mar 11 11:48:15 2015
+;; Desktop file format version 206
+;; Emacs version 24.3.1
+
+;; Global section:
+(setq comint-input-ring nil)
+(setq compile-history nil)
+(setq desktop-missing-file-warning nil)
+(setq extended-command-history '("package-install" "undo-tree-visualize" "evil-ex" "package-install" "shell"))
+(setq face-name-history nil)
+(setq file-name-history '("~/.emacs.d/lisp/init-editing-utils.el" "~/.emacs.d/elpa/flycheck-20150307.728/flycheck-autoloads.el" "/Users/liuxianming/.emacs.d/lisp/init-editing-utils.el" "~/Working/caffe/python/draw_net.py" "~/Working/caffe/Makefile.config.example" "~/.emacs.d/elpa/expand-region-20141223.1328/expand-region-autoloads.el" "~/.emacs.d/init.el" "~/.emacs.d/elpa/archives/melpa-stable/archive-contents" "~/.emacs.d/elpa/archives/melpa/archive-contents"))
+(setq grep-find-history nil)
+(setq grep-history nil)
+(setq ido-buffer-history '("net.cpp" "*Messages*" "*Compile-Log*" "*scratch*" "init-editing-utils.el" "undo-tree.elc" "init.el" "init-uniquify.el" " *undo-tree*" "TODO"))
+(setq ido-last-directory-list '(("/Users/liuxianming/" . ".emacs.d/")))
+(setq ido-work-directory-list '("/Users/liuxianming/.emacs.d/lisp/" "/Users/liuxianming/.emacs.d/"))
+(setq ido-work-file-list '("init-editing-utils.el" "init.el"))
+(setq minibuffer-history '("flycheck" "undo-tree" "evil"))
+(setq org-refile-history nil)
+(setq org-tags-history nil)
+(setq query-replace-history nil)
+(setq read-expression-history nil)
+(setq regexp-history nil)
+(setq regexp-search-ring nil)
+(setq register-alist nil)
+(setq search-ring '("undo"))
+(setq shell-command-history nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 206
+  "/Users/liuxianming/.emacs.d/lisp/init-editing-utils.el"
+  "init-editing-utils.el"
+  'emacs-lisp-mode
+  '(undo-tree-mode evil-escape-mode anzu-mode auto-complete-mode global-auto-revert-mode whitespace-cleanup-mode page-break-lines-mode whole-line-or-region-mode hes-mode guide-key-mode auto-compile-mode auto-compile-on-load-mode eldoc-mode flycheck-mode goto-address-prog-mode paredit-mode bug-reference-prog-mode diff-hl-mode highlight-symbol-mode highlight-quoted-mode elisp-slime-nav-mode rainbow-delimiters-mode aggressive-indent-mode redshank-mode)
+  3482
+  '(3482 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (overwrite-mode)))
+
