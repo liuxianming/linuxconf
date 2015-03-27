@@ -32,9 +32,8 @@
 ;; Load configs for specific features and modes
 ;;----------------------------------------------------------------------------
 
-;;evil mode from Bin Chen's emacs.d
-(require 'init-evil)
-
+;;evil mode from Bin Chen's emacs.
+;(require 'init-evil)
 (require-package 'wgrep)
 (require-package 'project-local-variables)
 (require-package 'diminish)

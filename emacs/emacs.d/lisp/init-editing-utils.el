@@ -108,7 +108,10 @@
 (after-load 'page-break-lines
   (push 'browse-kill-ring-mode page-break-lines-modes))
 
-;; I removed undo-tree package, since it is included in evil
+(require-package 'undo-tree)
+(global-undo-tree-mode)
+(diminish 'undo-tree-mode)
+
 ;;----------------------------------------------------------------------------
 ;; Don't disable narrowing commands
 ;;----------------------------------------------------------------------------
