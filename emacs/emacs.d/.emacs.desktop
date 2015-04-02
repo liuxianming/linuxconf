@@ -2,7 +2,7 @@
 ;; --------------------------------------------------------------------------
 ;; Desktop File for Emacs
 ;; --------------------------------------------------------------------------
-;; Created Wed Mar 11 11:48:15 2015
+;; Created Thu Apr  2 01:39:59 2015
 ;; Desktop file format version 206
 ;; Emacs version 24.3.1
 
@@ -10,37 +10,48 @@
 (setq comint-input-ring nil)
 (setq compile-history nil)
 (setq desktop-missing-file-warning nil)
-(setq extended-command-history '("package-install" "undo-tree-visualize" "evil-ex" "package-install" "shell"))
+(setq extended-command-history '("package-list-packages" "diff" "diff-mode" "diff" "diff-mode" "dark" "shell" "package-install" "undo-tree-visualize" "evil-ex" "package-install" "shell"))
 (setq face-name-history nil)
-(setq file-name-history '("~/.emacs.d/lisp/init-editing-utils.el" "~/.emacs.d/elpa/flycheck-20150307.728/flycheck-autoloads.el" "/Users/liuxianming/.emacs.d/lisp/init-editing-utils.el" "~/Working/caffe/python/draw_net.py" "~/Working/caffe/Makefile.config.example" "~/.emacs.d/elpa/expand-region-20141223.1328/expand-region-autoloads.el" "~/.emacs.d/init.el" "~/.emacs.d/elpa/archives/melpa-stable/archive-contents" "~/.emacs.d/elpa/archives/melpa/archive-contents"))
+(setq file-name-history '("~/.emacs.d/ede-projects.el" "~/.emacs.d/init.el" "~/.emacs.d/lisp/init-ccpp.el" "~/.emacs.d/ede-projects.el" "~/.emacs.d/init.el" "~/.emacs.d/lisp/init-ccpp.el" "~/.emacs.d/init.el" "~/.emacs.d/lisp/init-ccpp.el" "~/.emacs.d/init.el" "~/.emacs.d/lisp/init-ccpp.el" "~/.emacs.d/elpa/google-c-style-20140929.1118/google-c-style-autoloads.el" "~/.emacs.d/elpa/flymake-cursor-20130822.1032/flymake-cursor-autoloads.el" "~/.emacs.d/elpa/flymake-google-cpplint-20140205.525/flymake-google-cpplint-autoloads.el" "~/.emacs.d/elpa/flymake-easy-20140818.55/flymake-easy-autoloads.el" "~/.emacs.d/init.el" "~/.emacs.d/lisp/init-ccpp.el" "/Users/liuxianming/.emacs.d/lisp/init-css.el" "/Users/liuxianming/.emacs.d/lisp/init-textile.el" "~/.emacs.d/init.el" "/Users/liuxianming/.emacs.d/lisp/init-ccpp.el" "~/.emacs.d/init.el" "~/.emacs.d/elpa/iedit-20150108.1653/iedit-autoloads.el" "~/.emacs.d/init.el" "~/.emacs.d/elpa/auto-complete-c-headers-20140325.835/auto-complete-c-headers-autoloads.el" "~/.emacs.d/elpa/yasnippet-20150323.311/yasnippet-autoloads.el" "~/.emacs.d/init.el" "~/.emacs.d/lisp/#init-ccpp.el#" "~/.emacs.d/init.el" "~/.emacs.d/lisp/#init-ccpp.el#" "~/.emacs.d/init.el" "/Users/liuxianming/.emacs.d/custom.el" "/Users/liuxianming/.emacs.d/lisp/init-auto-complete.el" "/Users/liuxianming/.emacs.d/lisp/init-site-lisp.el" "/Users/liuxianming/.emacs.d/init.el" "~/.emacs.d/init.el" "/Users/liuxianming/.emacs.d/lisp/#init-ccpp.el#" "~/.emacs.d/init.el" "~/.emacs.d/elpa/color-theme-20080305.34/color-theme-autoloads.el" "~/.emacs.d/init.el" "/Users/liuxianming/.emacs.d/lisp/init-ccpp.el" "~/Working/caffe_feedback/include/caffe/layer.hpp" "~/Working/FNN/include/caffe/layer.hpp" "~/Working/FNN/include/caffe/vision_layers.hpp" "/Users/liuxianming/Working/FNN/src/caffe/layers/base_conv_layer.cpp" "/Users/liuxianming/Working/FNN/include/caffe/vision_layers.hpp" "~/Working/caffe_feedback/include/caffe/layer.hpp" "~/Working/FNN/include/caffe/layer.hpp" "~/Working/caffe_feedback/include/caffe/layer.hpp" "~/Working/FNN/include/caffe/layer.hpp" "~/Working/caffe_feedback/include/caffe/layer.hpp" "~/Working/caffe_feedback/include/caffe/layer.hpp" "/Users/liuxianming/Working/FNN/include/caffe/layer.hpp" "/Users/liuxianming/Working/FNN/include/caffe/common_layers.hpp" "/Users/liuxianming/Working/caffe_feedback/include/caffe/layer.hpp" "/Users/liuxianming/Working/FNN/include/caffe/layer.hpp" "~/Working/cs543_hw/HM3/Report/hm3.tex" "~/.emacs.d/lisp/init-evil.el" "~/.emacs.d/lisp/init-editing-utils.el" "~/.emacs.d/init.el" "/Users/liuxianming/Working/FNN/include/caffe/layer.hpp" "~/Working/cs543_hw/HM3/Report/hm3.tex" "~/.emacs.d/lisp/init-evil.el" "~/.emacs.d/lisp/init-editing-utils.el" "~/.emacs.d/init.el" "~/Working/cs543_hw/HM3/Report/hm3.tex" "~/.emacs.d/lisp/init-evil.el" "~/.emacs.d/lisp/init-editing-utils.el" "~/.emacs.d/init.el" "~/Working/cs543_hw/HM3/Report/hm3.tex" "~/.emacs.d/lisp/init-evil.el" "~/.emacs.d/lisp/init-editing-utils.el" "~/.emacs.d/init.el" "~/Working/cs543_hw/HM3/Report/hm3.tex" "~/.emacs.d/lisp/init-evil.el" "~/.emacs.d/lisp/init-editing-utils.el" "~/.emacs.d/init.el" "/Users/liuxianming/.emacs.d/lisp/init-editing-utils.el" "/Users/liuxianming/.emacs.d/init.el" "~/Working/cs543_hw/HM3/Report/hm3.tex" "~/.emacs.d/lisp/init-evil.el" "~/Working/cs543_hw/HM3/Report/hm3.tex" "~/.emacs.d/lisp/init-evil.el" "~/.emacs.d/custom.el" "~/Working/cs543_hw/HM3/Report/hm3.tex" "~/.emacs.d/lisp/init-evil.el" "~/Working/cs543_hw/HM3/Report/hm3.tex" "~/.emacs.d/lisp/init-evil.el" "~/Working/cs543_hw/HM3/Report/hm3.tex" "~/.emacs.d/lisp/init-evil.el" "/Users/liuxianming/Working/cs543_hw/HM3/Report/hm3.tex" "~/.emacs.d/lisp/init-editing-utils.el" "~/.emacs.d/elpa/flycheck-20150307.728/flycheck-autoloads.el" "/Users/liuxianming/.emacs.d/lisp/init-editing-utils.el" "~/Working/caffe/python/draw_net.py" "~/Working/caffe/Makefile.config.example" "~/.emacs.d/elpa/expand-region-20141223.1328/expand-region-autoloads.el" "~/.emacs.d/init.el" "~/.emacs.d/elpa/archives/melpa-stable/archive-contents" "~/.emacs.d/elpa/archives/melpa/archive-contents"))
 (setq grep-find-history nil)
 (setq grep-history nil)
-(setq ido-buffer-history '("net.cpp" "*Messages*" "*Compile-Log*" "*scratch*" "init-editing-utils.el" "undo-tree.elc" "init.el" "init-uniquify.el" " *undo-tree*" "TODO"))
-(setq ido-last-directory-list '(("/Users/liuxianming/" . ".emacs.d/")))
-(setq ido-work-directory-list '("/Users/liuxianming/.emacs.d/lisp/" "/Users/liuxianming/.emacs.d/"))
-(setq ido-work-file-list '("init-editing-utils.el" "init.el"))
+(setq ido-buffer-history '("init-ccpp.el" "init-css.el" "init-ccpp.el" "init-textile.el" "init.el" "*Packages*" "*Compile-Log*" "custom.el" "init-site-lisp.el" "init-auto-complete.el" "*Warnings*" "layer.hpp" "layer.hpp —£À FNN" "vision_layers.hpp" "base_conv_layer.cpp" "vision_layers.hpp" "*Diff*" "layer.hpp —£À caffe_feedback" "*Diff*" "layer.hpp —£À FNN" "layer.hpp —£À caffe_feedback" "*Diff*" "common_layers.hpp" nil "*scratch*" "layer.hpp —£À FNN" "*Messages*" "*Compile-Log*" "*scratch*" "hm3.tex" "init-evil.el" "init-editing-utils.el" "init.el" "layer.hpp" "init.el" "*Customize Group: Emacs*" "hm3.tex" "init-editing-utils.el" "net.cpp" "*Messages*" "*Compile-Log*" "*scratch*" "init-editing-utils.el" "undo-tree.elc" "init.el" "init-uniquify.el" " *undo-tree*" "TODO"))
+(setq ido-last-directory-list '(("/Users/liuxianming/.emacs.d/" . "lisp/") ("/Users/liuxianming/Working/FNN/src/caffe/" . "layers/") ("/Users/liuxianming/Working/FNN/src/" . "caffe/") ("/Users/liuxianming/Working/caffe_feedback/include/" . "caffe/") ("/Users/liuxianming/Working/caffe_feedback/" . "include/") ("/Users/liuxianming/Working/FNN/include/" . "caffe/") ("/Users/liuxianming/Working/FNN/" . "src/") ("/Users/liuxianming/Working/cs543_hw/HM3/" . "Report/") ("/Users/liuxianming/Working/cs543_hw/" . "HM3/") ("/Users/liuxianming/Working/" . "FNN/") ("/Users/liuxianming/" . ".emacs.d/")))
+(setq ido-work-directory-list '("/Users/liuxianming/.emacs.d/lisp/" "/Users/liuxianming/.emacs.d/" "/Users/liuxianming/Working/FNN/src/caffe/layers/" "/Users/liuxianming/Working/FNN/include/caffe/" "/Users/liuxianming/Working/caffe_feedback/include/caffe/" "/Users/liuxianming/Working/cs543_hw/HM3/Report/"))
+(setq ido-work-file-list '("init-css.el" "init-textile.el" "init-ccpp.el" "custom.el" "init-auto-complete.el" "init-site-lisp.el" "init.el" "#init-ccpp.el#" "base_conv_layer.cpp" "vision_layers.hpp"))
 (setq minibuffer-history '("flycheck" "undo-tree" "evil"))
 (setq org-refile-history nil)
 (setq org-tags-history nil)
 (setq query-replace-history nil)
 (setq read-expression-history nil)
 (setq regexp-history nil)
-(setq regexp-search-ring nil)
-(setq register-alist nil)
-(setq search-ring '("undo"))
+(setq regexp-search-ring '("undo"))
+(setq register-alist '((48 . "/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin/cpplint")))
+(setq search-ring '("google-c-s" "flymake-cu" "flymake-google" "auto-complete-clang" "iedit" "auto-complete-c" "yasnippet" "init-auto-" "ccpp" "theme" "color-theme" "init-theme" "eq_filter" "get" "eq_filter" "undo"))
 (setq shell-command-history nil)
 (setq tags-file-name nil)
 (setq tags-table-list nil)
 
 ;; Buffer section -- buffers listed in same order as in buffer list:
 (desktop-create-buffer 206
-  "/Users/liuxianming/.emacs.d/lisp/init-editing-utils.el"
-  "init-editing-utils.el"
+  "/Users/liuxianming/.emacs.d/lisp/init-ccpp.el"
+  "init-ccpp.el"
   'emacs-lisp-mode
-  '(undo-tree-mode evil-escape-mode anzu-mode auto-complete-mode global-auto-revert-mode whitespace-cleanup-mode page-break-lines-mode whole-line-or-region-mode hes-mode guide-key-mode auto-compile-mode auto-compile-on-load-mode eldoc-mode flycheck-mode goto-address-prog-mode paredit-mode bug-reference-prog-mode diff-hl-mode highlight-symbol-mode highlight-quoted-mode elisp-slime-nav-mode rainbow-delimiters-mode aggressive-indent-mode redshank-mode)
-  3482
-  '(3482 nil)
+  '(anzu-mode auto-complete-mode global-auto-revert-mode whitespace-cleanup-mode undo-tree-mode page-break-lines-mode whole-line-or-region-mode hes-mode guide-key-mode yas-minor-mode flycheck-mode bug-reference-prog-mode diff-hl-mode highlight-symbol-mode auto-compile-mode auto-compile-on-load-mode eldoc-mode goto-address-prog-mode paredit-mode highlight-quoted-mode elisp-slime-nav-mode rainbow-delimiters-mode aggressive-indent-mode redshank-mode)
+  3062
+  '(1945 nil)
   nil
   nil
   '((buffer-file-coding-system . undecided-unix) (overwrite-mode)))
+
+(desktop-create-buffer 206
+  "/Users/liuxianming/.emacs.d/init.el"
+  "init.el"
+  'emacs-lisp-mode
+  '(anzu-mode auto-complete-mode global-auto-revert-mode whitespace-cleanup-mode undo-tree-mode page-break-lines-mode whole-line-or-region-mode hes-mode guide-key-mode yas-minor-mode flycheck-mode bug-reference-prog-mode diff-hl-mode highlight-symbol-mode auto-compile-mode auto-compile-on-load-mode eldoc-mode goto-address-prog-mode paredit-mode highlight-quoted-mode elisp-slime-nav-mode rainbow-delimiters-mode aggressive-indent-mode redshank-mode)
+  2444
+  '(2355 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (overwrite-mode)))
 

@@ -1,16 +1,21 @@
 
 ;; ----- smex-history -----
 (
+ package-list-packages
+ diff
+ diff-mode
+ shell
  package-install
  cd
- ri
  5x5
- arp
- dbx
- dig
 )
 
 ;; ----- smex-data -----
 (
  (package-install . 2)
+ (shell . 1)
+ (dark . 2)
+ (diff-mode . 2)
+ (diff . 7)
+ (package-list-packages . 6)
 )
