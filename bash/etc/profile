@@ -47,10 +47,15 @@ export LD_LIBRARY_PATH="/usr/local/opencv243/build/lib:$LD_LIBRARY_PATH"
 
 # python libs
 export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
-# export PYTHONPATH="/home/xliu102/anaconda/lib/python2.7/site-packages/:$PYTHONPATH"
+#export PYTHONPATH="/home/xliu102/anaconda/lib/python2.7/site-packages/:$PYTHONPATH"
+
+export PYTHONPATH="/usr/local/lib/python2.7/dist-packages:$PYTHONPATH"
 export PYTHONPATH="/usr/local/opencv243/build/lib/python2.7/site-packages:$PYTHONPATH"
 
 export CUDA_ROOT="/usr/local/cuda/"
 
 # Insert support to Intel MKL / TBB etc
 source /opt/intel/bin/compilervars.sh intel64
+# support intel fortran compiler: ifort
+#export PATH="/opt/intel/composer_xe_2013.2.146/bin/intel64:$PATH"
+export LD_LIBRARY_PATH="/opt/intel/mkl/lib/intel64:/opt/intel/lib/intel64:$LD_LIBRARY_PATH"
