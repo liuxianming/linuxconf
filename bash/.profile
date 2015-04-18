@@ -15,5 +15,6 @@ source /opt/intel/bin/compilervars.sh intel64
 #export PATH="/opt/intel/composer_xe_2013.2.146/bin/intel64:$PATH"
 export LD_LIBRARY_PATH="/opt/intel/mkl/lib/intel64:/opt/intel/lib/intel64:$LD_LIBRARY_PATH"
 
+export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:/usr/include/x86_64-linux-gnu/c++/4.8
 
 #alias sudo='sudo env PATH=$PATH'
