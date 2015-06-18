@@ -1,5 +1,10 @@
+;;; package init-python-mode Summary
 ;; Configuration of Python IDE
+;; to enable jedi, need to:
+;; M-x package-install RET jedi RET
+;; M-x jedi:install-server
 (require 'elpy nil t)
+;;; Code:
 (elpy-enable)
 (add-hook 'python-mode-hook 'jedi:setup)
 (setq jedi:complete-on-dot t)
@@ -10,3 +15,4 @@
 (elpy-use-ipython)
 
 (provide 'init-python-mode)
+;;; init-python-mode ends here
