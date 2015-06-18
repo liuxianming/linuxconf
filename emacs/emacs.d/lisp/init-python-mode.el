@@ -1,9 +1,10 @@
-(setq auto-mode-alist
-      (append '(("SConstruct\\'" . python-mode)
-		("SConscript\\'" . python-mode))
-              auto-mode-alist))
-
-(require-package 'pip-requirements)
-
+;; Configuration of Python IDE
+(require 'elpy nil t)
+(elpy-enable)
+;; use jedi as default auto-complet
+(setq elpy-rpc-backend "jedi")
+;; use ipython as default python debugger
+;; use C-c C-c to debug / run python script
+(elpy-use-ipython)
 
 (provide 'init-python-mode)
