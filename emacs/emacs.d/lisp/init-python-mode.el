@@ -4,6 +4,7 @@
 ;; M-x package-install RET jedi RET
 ;; M-x jedi:install-server
 (require-package 'elpy)
+(require-package 'jedi)
 
 (require 'elpy nil t)
 ;;; Code:
