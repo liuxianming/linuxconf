@@ -70,6 +70,7 @@
 (require 'init-github)
 
 (require 'init-ccpp)
+(require 'cuda-mode)
 (require 'init-compile)
 (require 'init-crontab)
 (require 'init-textile)
