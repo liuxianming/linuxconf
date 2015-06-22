@@ -3,6 +3,10 @@
 
 ;; auto-compelete
 ; start auto-complete with emacs
+(require-package 'auto-complete)
+(require-package 'cuda-mode)
+(require-package 'yasnippet)
+
 (require 'auto-complete)
 ; do default config for auto-complete
 (require 'auto-complete-config)
