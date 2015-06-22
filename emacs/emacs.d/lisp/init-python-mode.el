@@ -3,6 +3,8 @@
 ;; to enable jedi, need to:
 ;; M-x package-install RET jedi RET
 ;; M-x jedi:install-server
+(require-package 'elpy)
+
 (require 'elpy nil t)
 ;;; Code:
 (elpy-enable)
