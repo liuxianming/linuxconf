@@ -10,8 +10,6 @@
 
 (require 'package)
 
-
-
 ;;; Standard package repositories
 
 ;;(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
