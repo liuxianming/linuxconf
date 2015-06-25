@@ -3,6 +3,7 @@
 ;; to enable jedi, need to:
 ;; M-x package-install RET jedi RET
 ;; M-x jedi:install-server
+;; for mac, pip install epc jedi to finish installing jedi-server
 (require-package 'elpy)
 (require-package 'jedi)
 
