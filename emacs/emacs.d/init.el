@@ -39,6 +39,7 @@
 (require-package 'diminish)
 (require-package 'scratch)
 (require-package 'mwe-log-commands)
+(require-package 'color-theme)
 
 (require 'init-frame-hooks)
 (require 'init-xterm)

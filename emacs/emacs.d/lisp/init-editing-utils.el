@@ -1,4 +1,5 @@
 (require-package 'unfill)
+(require-package 'expand-region)
 
 (when (fboundp 'electric-pair-mode)
   (electric-pair-mode))

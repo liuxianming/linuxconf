@@ -6,6 +6,7 @@
 (require-package 'auto-complete)
 (require-package 'cuda-mode)
 (require-package 'yasnippet)
+(require-package 'google-c-style)
 
 (require 'auto-complete)
 ; do default config for auto-complete
