@@ -7,6 +7,8 @@
 (require-package 'cuda-mode)
 (require-package 'yasnippet)
 (require-package 'google-c-style)
+(require-package 'auto-complete-c-headers)
+(require-package 'flymake-google-cpplint)
 
 (require 'auto-complete)
 ; do default config for auto-complete
