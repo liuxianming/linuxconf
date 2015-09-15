@@ -19,7 +19,7 @@ sudo pip install --upgrade rope
 sudo pip install --upgrade epc jedi
 sudo pip install --upgrade flake8
 sudo pip install --upgrade importmagic
-sudo pip install --upgrade percol pyflakes
+sudo pip install --upgrade percol pyflakes autopep8
 
 # run emacs to complete configuration
 emacs -nw
