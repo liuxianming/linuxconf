@@ -44,6 +44,7 @@
 (require 'init-frame-hooks)
 (require 'init-xterm)
 ;(require 'init-themes)
+(load-theme 'solarized t)
 (require 'init-osx-keys)
 (require 'init-gui-frames)
 (require 'init-proxies)
@@ -164,11 +165,3 @@
     (ediff file1 file2)))
 (add-to-list 'command-switch-alist '("diff" . command-line-diff))
 ;; Usage: emacs -diff file1 file2
-
-;; set color-theme
-;; color theme
-(require 'color-theme)
-(require 'color-theme-molokai)
-(color-theme-molokai)
-;; This line must be after color-theme-molokai! Don't know why.
-(setq color-theme-illegal-faces "^\\(w3-\\|dropdown-\\|info-\\|linum\\|yas-\\|font-lock\\)")
