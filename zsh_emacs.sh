@@ -22,5 +22,8 @@ sudo pip install --upgrade importmagic
 sudo pip install --upgrade percol pyflakes autopep8
 sudo pip install --upgrade virtualenv
 
+# color theme
+git clone https://github.com/sellout/emacs-color-theme-solarized.git ~/.emacs.d/site-lisp/emacs-color-theme-solarized
+
 # run emacs to complete configuration
 emacs -nw
