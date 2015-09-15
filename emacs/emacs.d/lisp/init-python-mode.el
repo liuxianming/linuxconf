@@ -16,7 +16,7 @@
 (setq elpy-rpc-backend "jedi")
 ;; use ipython as default python debugger
 ;; use C-c C-c to debug / run python script
-(elpy-use-ipython)
+;; (elpy-use-ipython)
 
 (provide 'init-python-mode)
 ;;; init-python-mode ends here
