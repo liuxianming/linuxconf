@@ -13,8 +13,13 @@ else
   sh -c "`curl -fsSL https://raw.github.com/skwp/dotfiles/master/install.sh`"
 fi
 
-# Install oh-my-emacs
-git clone https://github.com/xiaohanyu/oh-my-emacs $HOME/.emacs.d
+# Configure emacs
+cp -rf ./emacs/emacs.d ~/.emacs.d
+sudo pip install --upgrade rope
+sudo pip install --upgrade epc jedi
+sudo pip install --upgrade flake8
+sudo pip install --upgrade importmagic
+sudo pip install --upgrade percol pyflakes
 
 # run emacs to complete configuration
-emacs
+emacs -nw
