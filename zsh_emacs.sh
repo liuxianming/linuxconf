@@ -13,6 +13,9 @@ else
   sh -c "`curl -fsSL https://raw.github.com/skwp/dotfiles/master/install.sh`"
 fi
 
+# copy the tmux configuration
+cp ./tmux.conf ~/.tmux.conf
+
 # Configure emacs
 cp -rf ./emacs/emacs.d ~/.emacs.d
 sudo pip install --upgrade rope
