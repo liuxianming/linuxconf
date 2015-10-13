@@ -29,4 +29,5 @@ sudo pip install --upgrade virtualenv
 git clone https://github.com/sellout/emacs-color-theme-solarized.git ~/.emacs.d/site-lisp/emacs-color-theme-solarized
 
 # run emacs to complete configuration
+git clone https://github.com/gabrielelanaro/emacs-for-python.git .emacs.d/site-lisp/emacs-for-python
 emacs -nw
