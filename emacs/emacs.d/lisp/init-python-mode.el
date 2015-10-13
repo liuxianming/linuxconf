@@ -1,22 +1,7 @@
 ;;; package init-python-mode Summary
 ;; Configuration of Python IDE
-;; to enable jedi, need to:
-;; M-x package-install RET jedi RET
-;; M-x jedi:install-server
-;; for mac, pip install epc jedi to finish installing jedi-server
-(require-package 'elpy)
-(require-package 'jedi)
-
-(require 'elpy nil t)
-;;; Code:
-(elpy-enable)
-(add-hook 'python-mode-hook 'jedi:setup)
-(setq jedi:complete-on-dot t)
-;; use jedi as default auto-complet
-(setq elpy-rpc-backend "jedi")
-;; use ipython as default python debugger
-;; use C-c C-c to debug / run python script
-;; (elpy-use-ipython)
-
+(require-package 'highlight-indentation)
+(require 'highlight-indentation)
+(load-file "~/.emacs.d/site-lisp/emacs-for-python/epy-init.el")
 (provide 'init-python-mode)
 ;;; init-python-mode ends here
