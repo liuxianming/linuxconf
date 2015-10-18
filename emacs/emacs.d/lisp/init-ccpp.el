@@ -4,11 +4,10 @@
 ;; auto-compelete
 ; start auto-complete with emacs
 (require-package 'auto-complete)
-(require-package 'cuda-mode)
 (require-package 'yasnippet)
+(require-package 'cuda-mode)
 (require-package 'google-c-style)
 (require-package 'auto-complete-c-headers)
-(require-package 'flymake-google-cpplint)
 
 (require 'auto-complete)
 ; do default config for auto-complete
@@ -22,7 +21,7 @@
 (defun my:ac-c-header-init ()
   (require 'auto-complete-c-headers)
   (add-to-list 'ac-sources 'ac-source-c-headers)
-  ;; for mac platform, using 
+  ;; for mac platform, using
   ;; gcc -xc++ -E -v -
   ;; to find the xcode include folder
   (add-to-list 'achead:include-directories '"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include")
@@ -86,7 +85,7 @@
   (mapc (lambda (dir)
           (semantic-add-system-include dir 'c++-mode)
           (semantic-add-system-include dir 'c-mode))
-        include-dirs))  
+        include-dirs))
 
 (global-ede-mode 1)
 

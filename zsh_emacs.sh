@@ -28,6 +28,11 @@ sudo pip install --upgrade virtualenv
 # color theme
 git clone https://github.com/sellout/emacs-color-theme-solarized.git ~/.emacs.d/site-lisp/emacs-color-theme-solarized
 
+# setting up cpplint.py
+wget http://google-styleguide.googlecode.com/svn/trunk/cpplint/cpplint.py
+sudo mv cpplint.py /usr/local/bin/cpplint.py
+sudo chmod 755 /usr/local/bin/cpplint.py
+
 # run emacs to complete configuration
-git clone https://github.com/gabrielelanaro/emacs-for-python.git .emacs.d/site-lisp/emacs-for-python
+# git clone https://github.com/gabrielelanaro/emacs-for-python.git .emacs.d/site-lisp/emacs-for-python
 emacs -nw
