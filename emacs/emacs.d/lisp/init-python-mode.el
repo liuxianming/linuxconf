@@ -1,6 +1,7 @@
 ;;; package init-python-mode Summary
 ;; Configuration of Python IDE
 (require-package 'elpy)
+(require-package 'iedit)
 (elpy-enable)
 ;; define yas-expand
 (define-key yas-minor-mode-map (kbd "C-c k") 'yas-expand)
