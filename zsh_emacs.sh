@@ -7,7 +7,7 @@ else
   git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
   git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
   export PATH=$PATH:$HOME/.rbenv/bin
-  proxycmd.sh rbenv install 2.0.0-p353
+  rbenv install 2.0.0-p353
   eval "$(rbenv init -)"
   rbenv shell 2.0.0-p353
   sh -c "`curl -fsSL https://raw.github.com/skwp/dotfiles/master/install.sh`"
