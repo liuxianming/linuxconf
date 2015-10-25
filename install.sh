@@ -16,13 +16,13 @@ fi
 ${cmd} install git
 git config --global user.name "liuxianming"
 git config --global user.email "liuxianming@gmail.com"
-git clone git@github.com:liuxianming/linuxconf.git $HOME/unixconf
-cd $HOME/unixconf
+git clone git@github.com:liuxianming/linuxconf.git $HOME/linuxconf
+cd $HOME/linuxconf
 
 # setup python
 sudo pip install -r python_package_list.txt
 # setup all packages using apt-get / brew
-cd $HOME/unixconf
+cd $HOME/linuxconf
 if [ "$(uname)" == "Darwin" ]; then
   ./setup_brew.sh
 else
@@ -31,13 +31,14 @@ fi
 
 # protobuf
 git clone git@github.com:google/protobuf.git protobuf
-cd $HOME/protobuf
+cd protobuf
 ./autogen.sh
 ./configure
 make
 make check
 sudo make install
 
+cd $HOME/linuxconf
 # Installing Zsh + YADR/prezto
 if [ "$(uname)" == "Darwin" ]; then
   sh -c "`curl -fsSL https://raw.github.com/skwp/dotfiles/master/install.sh`"
