@@ -16,7 +16,9 @@ fi
 ${cmd} install git
 git config --global user.name "liuxianming"
 git config --global user.email "liuxianming@gmail.com"
-git clone git@github.com:liuxianming/linuxconf.git $HOME/linuxconf
+if ! [[ -d $HOME/linuxconf ]]; then
+  git clone git@github.com:liuxianming/linuxconf.git $HOME/linuxconf
+fi
 cd $HOME/linuxconf
 
 # setup python
