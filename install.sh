@@ -1,3 +1,4 @@
+#!/bin/bash
 if [ "$(uname)" == "Darwin" ]; then
   # install homebrew
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -21,7 +22,12 @@ cd $HOME/unixconf
 # setup python
 sudo pip install -r python_package_list.txt
 # setup all packages using apt-get / brew
-${cmd} install < ./sys_package_list.txt
+cd $HOME/unixconf
+if [ "$(uname)" == "Darwin" ]; then
+  ./setup_brew.sh
+else
+  ./setup_aptget.sh
+fi
 
 # protobuf
 git clone git@github.com:google/protobuf.git protobuf

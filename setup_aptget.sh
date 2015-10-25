@@ -1,0 +1,6 @@
+#!/bin/bash
+sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler
+sudo apt-get install --no-install-recommends libboost-all-dev
+sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev
+sudo apt-get install emacs openssl gcc-4.8-multilib g++-4.8-multilib
+sudo apt-get install dh-autoreconf cmake
