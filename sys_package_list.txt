@@ -1,0 +1,8 @@
+emacs
+openssl
+libboost-all-dev
+gcc-4.8-multilib
+g++-4.8-multilib
+libgtest-dev
+cmake
+dh-autoreconf
