@@ -46,6 +46,8 @@
 (require-package 'mwe-log-commands)
 (require-package 'color-theme)
 
+(require 'remote-emacsclient)
+(update-tramp-emacs-server-port-forward tramp-default-method)
 (require 'init-frame-hooks)
 (require 'init-xterm)
 (require 'init-themes)

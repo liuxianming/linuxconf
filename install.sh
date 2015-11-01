@@ -65,3 +65,6 @@ wget http://google-styleguide.googlecode.com/svn/trunk/cpplint/cpplint.py
 sudo mv cpplint.py /usr/local/bin/cpplint.py
 sudo chmod 755 /usr/local/bin/cpplint.py
 emacs -nw
+# copy emacsclient.py
+sudo cp emacs/emacsclient.py /usr/local/bin/
+sudo chmod +x /usr/local/bin/emamcsclient.py
