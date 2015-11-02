@@ -47,7 +47,6 @@
 (require-package 'color-theme)
 
 (require 'remote-emacsclient)
-(update-tramp-emacs-server-port-forward tramp-default-method)
 (require 'init-frame-hooks)
 (require 'init-xterm)
 (require 'init-themes)
@@ -124,12 +123,12 @@
 (require-package 'regex-tool)
 
 ;;----------------------------------------------------------------------------
-;; Allow access from emacsclient
+;; Seting up Keybinding
 ;;----------------------------------------------------------------------------
-(require 'server)
-(unless (server-running-p)
-  (server-start))
-
+(when (eq system-type 'darwin) ;; mac specific settings
+  (setq mac-option-modifier 'meta)
+  (global-set-key [kp-delete] 'delete-char) ;; sets fn-delete to be right-delete
+  )
 
 ;;----------------------------------------------------------------------------
 ;; Variables configured via the interactive 'customize' interface

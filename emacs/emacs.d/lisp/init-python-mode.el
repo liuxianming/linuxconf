@@ -9,6 +9,7 @@
 (define-key global-map (kbd "C-c o") 'iedit-mode)
 
 (setq
+ python-shell-interpreter "/usr/local/bin/ipython"
  python-shell-prompt-regexp "In \\[[0-9]+\\]: "
  python-shell-prompt-output-regexp "Out\\[[0-9]+\\]: "
  python-shell-completion-setup-code
