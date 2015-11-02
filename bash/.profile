@@ -18,3 +18,4 @@ export LD_LIBRARY_PATH="/opt/intel/mkl/lib/intel64:/opt/intel/lib/intel64:$LD_LI
 export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:/usr/include/x86_64-linux-gnu/c++/4.8
 
 #alias sudo='sudo env PATH=$PATH'
+alias pastebin='xclip -sel clip'
