@@ -68,3 +68,7 @@ emacs -nw
 # copy emacsclient.py
 sudo cp emacs/emacsclient-tcpip /usr/local/bin/
 sudo chmod +x /usr/local/bin/emamcsclient-tcpip
+
+# Install docker
+echo "Installing Docker..."
+sudo wget -qO- https://get.docker.com/ | sh
