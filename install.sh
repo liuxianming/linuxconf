@@ -71,4 +71,8 @@ sudo chmod +x /usr/local/bin/emamcsclient-tcpip
 
 # Install docker
 echo "Installing Docker..."
-sudo wget -qO- https://get.docker.com/ | sh
+if [ "$(uname)" == "Darwin" ]; then
+  brew install Caskroom/cask/dockertoolbox
+else:
+  sudo wget -qO- https://get.docker.com/ | sh
+fi
