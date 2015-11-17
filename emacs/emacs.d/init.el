@@ -49,7 +49,6 @@
 (require 'remote-emacsclient)
 (require 'init-frame-hooks)
 (require 'init-xterm)
-(require 'init-themes)
 (require 'init-osx-keys)
 (require 'init-gui-frames)
 (require 'init-proxies)
@@ -162,5 +161,8 @@
     (ediff file1 file2)))
 (add-to-list 'command-switch-alist '("diff" . command-line-diff))
 ;; Usage: emacs -diff file1 file2
+
+;; Put init color themes at the end
+(require 'init-themes)
 
 (provide 'init)
