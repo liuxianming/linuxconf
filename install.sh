@@ -68,3 +68,11 @@ emacs -nw
 # copy emacsclient.py
 sudo cp emacs/emacsclient-tcpip /usr/local/bin/
 sudo chmod +x /usr/local/bin/emamcsclient-tcpip
+
+# Install docker
+echo "Installing Docker..."
+if [ "$(uname)" == "Darwin" ]; then
+  brew install Caskroom/cask/dockertoolbox
+else:
+  sudo wget -qO- https://get.docker.com/ | sh
+fi
