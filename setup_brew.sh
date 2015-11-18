@@ -7,3 +7,4 @@ brew install --build-from-source --with-python -vd protobuf
 brew install --build-from-source -vd boost boost-python
 brew install protobuf boost
 brew install emacs openssl cmake
+brew install mosh
