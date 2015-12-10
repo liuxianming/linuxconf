@@ -5,20 +5,20 @@ Host github.com
     PreferredAuthentications publickey
     IdentityFile ~/.ssh/id_rsa
 
-Host avocado.ifp.illnois.edu
+Host avocado
     User xliu102
     Hostname avocado.ifp.illinois.edu
     PreferredAuthentications publickey
     IdentityFile ~/.ssh/id_rsa
 
-Host ifp-24.ifp.uiuc.edu
+Host ifp-24
     User xliu102
     Hostname ifp-24.ifp.uiuc.edu
     Port 22345
     PreferredAuthentications publickey
     IdentityFile ~/.ssh/id_rsa
 
-Host wuwu.beckman.illinois.edu
+Host wuwu
     User xliu102
     Hostname wuwu.beckman.illinois.edu
     PreferredAuthentications publickey
