@@ -80,6 +80,6 @@ fi
 # copy other config files
 if ! [[ -d ~/.ssh/ ]]; then
   mkdir ~/.ssh/
-  cp ./ssh/config ~/.ssh/
 fi
+cp ./ssh/config ~/.ssh/
 cp ./zsh/.zshrc ~/
