@@ -76,3 +76,10 @@ if [ "$(uname)" == "Darwin" ]; then
 else:
   sudo wget -qO- https://get.docker.com/ | sh
 fi
+
+# copy other config files
+if ! [[ -d ~/.ssh/ ]]; then
+  mkdir ~/.ssh/
+  cp ./ssh/config ~/.ssh/
+fi
+cp ./zsh/.zshrc ~/

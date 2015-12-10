@@ -1,0 +1,25 @@
+RemoteForward 29398 127.0.0.1:29398
+Host github.com
+    User git
+    Hostname github.com
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/id_rsa
+
+Host avocado.ifp.illnois.edu
+    User xliu102
+    Hostname avocado.ifp.illinois.edu
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/id_rsa
+
+Host ifp-24.ifp.uiuc.edu
+    User xliu102
+    Hostname ifp-24.ifp.uiuc.edu
+    Port 22345
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/id_rsa
+
+Host wuwu.beckman.illinois.edu
+    User xliu102
+    Hostname wuwu.beckman.illinois.edu
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/wuwu_key
