@@ -30,7 +30,8 @@ brew cask install --appdir="/Applications" dropbox
 brew cask install --appdir="~/Applications" iterm2
 brew cask install --appdir="~/Applications" java
 brew cask install --appdir="/Applications" google-chrome
-brew cask --appdir="/Applications" install sublime-text3
+brew cask install --appdir="/Applications" sublime-text3
+brew cask install --appdir="/Applications" evernote
 
 # cleanup
 echo ClearnUp of Homebrew
