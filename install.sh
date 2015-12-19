@@ -22,7 +22,7 @@ fi
 cd $HOME/linuxconf
 
 # setup python
-sudo pip install -r python_package_list.txt
+sudo pip install -r $HOME/linuxconf/python_package_list.txt
 # setup all packages using apt-get / brew
 cd $HOME/linuxconf
 if [ "$(uname)" == "Darwin" ]; then
@@ -32,8 +32,8 @@ else
 fi
 
 # protobuf
-git clone git@github.com:google/protobuf.git protobuf
-cd protobuf
+git clone git@github.com:google/protobuf.git $HOME/protobuf
+cd $HOME/protobuf
 ./autogen.sh
 ./configure
 make
