@@ -6,7 +6,7 @@ if [ "$(uname)" == "Darwin" ]; then
   cmd=brew
   # python on mac need to be reinstalled
   brew install python
-else:
+else
   cmd=sudo apt-get
   sudo apt-get update
   sudo apt-get install python-pip
@@ -73,7 +73,7 @@ sudo chmod +x /usr/local/bin/emamcsclient-tcpip
 echo "Installing Docker..."
 if [ "$(uname)" == "Darwin" ]; then
   brew install Caskroom/cask/dockertoolbox
-else:
+else
   sudo wget -qO- https://get.docker.com/ | sh
 fi
 
