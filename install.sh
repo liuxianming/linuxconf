@@ -26,13 +26,16 @@ sudo pip install -r $HOME/linuxconf/python_package_list.txt
 # setup all packages using apt-get / brew
 cd $HOME/linuxconf
 if [ "$(uname)" == "Darwin" ]; then
+  chmod +x ./setup_brew.sh
   ./setup_brew.sh
 else
+  chmod +x ./setup_aptget.sh
   ./setup_aptget.sh
 fi
 
 # protobuf
-git clone git@github.com:google/protobuf.git $HOME/protobuf
+echo Installing Protobuf
+git clone https://github.com:google/protobuf.git $HOME/protobuf
 cd $HOME/protobuf
 ./autogen.sh
 ./configure
