@@ -60,7 +60,7 @@ fi
 cp ./tmux.conf ~/.tmux.conf
 
 # Configure emacs
-cp -rf ./emacs/emacs.d ~/.emacs.d
+cp -rf emacs/emacs.d ~/.emacs.d
 # color theme
 git clone https://github.com/sellout/emacs-color-theme-solarized.git ~/.emacs.d/site-lisp/emacs-color-theme-solarized
 # setting up cpplint.py
