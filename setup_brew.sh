@@ -8,8 +8,8 @@ brew install rbenv-gem-rehash
 brew install ruby-build
 rbenv install 2.1.2
 rbenv global 2.1.2
-gem update --system
-gem install bundler jekyll rails
+sudo gem update --system
+sudo gem install bundler jekyll rails
 # install node
 brew install node
 
