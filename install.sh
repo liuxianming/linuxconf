@@ -35,7 +35,7 @@ fi
 
 # protobuf
 echo Installing Protobuf
-git clone https://github.com:google/protobuf.git $HOME/protobuf
+git clone https://github.com/google/protobuf.git $HOME/protobuf
 cd $HOME/protobuf
 ./autogen.sh
 ./configure
