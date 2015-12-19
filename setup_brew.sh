@@ -18,7 +18,6 @@ brew tap homebrew/science
 brew install hdf5 opencv
 brew install --build-from-source --with-python -vd protobuf
 brew install --build-from-source -vd boost boost-python
-brew install protobuf boost
 brew install openssl cmake
 brew install emacs --cocoa
 brew install mosh
