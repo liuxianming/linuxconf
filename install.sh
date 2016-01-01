@@ -6,7 +6,7 @@ if [ "$(uname)" == "Darwin" ]; then
   cmd=brew
   # python on mac need to be reinstalled
   brew install python
-else:
+else
   cmd=sudo apt-get
   sudo apt-get update
   sudo apt-get install python-pip
@@ -17,23 +17,26 @@ ${cmd} install git
 git config --global user.name "liuxianming"
 git config --global user.email "liuxianming@gmail.com"
 if ! [[ -d $HOME/linuxconf ]]; then
-  git clone git@github.com:liuxianming/linuxconf.git $HOME/linuxconf
+  git clone https://github.com/liuxianming/linuxconf.git $HOME/linuxconf
 fi
 cd $HOME/linuxconf
 
 # setup python
-sudo pip install -r python_package_list.txt
+sudo pip install -r $HOME/linuxconf/python_package_list.txt
 # setup all packages using apt-get / brew
 cd $HOME/linuxconf
 if [ "$(uname)" == "Darwin" ]; then
+  chmod +x ./setup_brew.sh
   ./setup_brew.sh
 else
+  chmod +x ./setup_aptget.sh
   ./setup_aptget.sh
 fi
 
 # protobuf
-git clone git@github.com:google/protobuf.git protobuf
-cd protobuf
+echo Installing Protobuf
+git clone https://github.com/google/protobuf.git $HOME/protobuf
+cd $HOME/protobuf
 ./autogen.sh
 ./configure
 make
@@ -57,7 +60,7 @@ fi
 cp ./tmux.conf ~/.tmux.conf
 
 # Configure emacs
-cp -rf ./emacs/emacs.d ~/.emacs.d
+cp -rf emacs/emacs.d ~/.emacs.d
 # color theme
 git clone https://github.com/sellout/emacs-color-theme-solarized.git ~/.emacs.d/site-lisp/emacs-color-theme-solarized
 # setting up cpplint.py
@@ -73,7 +76,7 @@ sudo chmod +x /usr/local/bin/emamcsclient-tcpip
 echo "Installing Docker..."
 if [ "$(uname)" == "Darwin" ]; then
   brew install Caskroom/cask/dockertoolbox
-else:
+else
   sudo wget -qO- https://get.docker.com/ | sh
 fi
 

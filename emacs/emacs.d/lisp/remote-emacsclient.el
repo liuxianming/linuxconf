@@ -112,7 +112,7 @@ successful connection."
 ;; auto-install our remote utilities, security data, etc, on first connection
 ;; to the remote server.
 (setq server-use-tcp t
-      server-port    29398)
+      server-port    52698)
 ;; (setq server-use-tcp nil)
 (server-start)
 
