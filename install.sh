@@ -79,6 +79,8 @@ if [ "$(uname)" == "Darwin" ]; then
 else
   sudo wget -qO- https://get.docker.com/ | sh
 fi
+# create a user group docker
+sudo usermod -aG docker $(whoami)
 
 # copy other config files
 if ! [[ -d ~/.ssh/ ]]; then
