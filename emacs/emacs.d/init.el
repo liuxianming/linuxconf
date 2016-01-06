@@ -75,6 +75,7 @@
 (require 'init-git)
 (require 'init-github)
 
+(require 'general-code-setting)
 (require 'init-ccpp)
 (require 'cuda-mode)
 (require 'init-compile)
@@ -90,7 +91,8 @@
 (require 'init-html)
 (require 'init-css)
 (require 'init-haml)
-(require 'init-python-mode)
+;; (require 'init-python-mode)
+(require 'init-anaconda-mode)
 (require 'init-haskell)
 (require 'init-ruby-mode)
 (require 'init-rails)
