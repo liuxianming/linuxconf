@@ -22,6 +22,8 @@ brew install openssl cmake
 brew install emacs --cocoa
 brew install mosh
 brew install macvim --override-system-vim
+# install gtags
+brew install global
 # install other softwares
 echo Install Core Apps
 brew install x2goclient
