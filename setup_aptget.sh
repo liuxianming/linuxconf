@@ -12,3 +12,6 @@ sudo apt-get update
 sudo apt-get install mosh
 # install gtags
 sudo apt-get install global
+# prepare python packages
+sudo apt-get install python-dev python2.7-dev libatlas-dev
+sudo apt-get install python-numpy python-scipy
