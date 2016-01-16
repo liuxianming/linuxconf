@@ -8,6 +8,9 @@ if [ "$(uname)" == "Darwin" ]; then
   brew install python
 else
   cmd=sudo apt-get
+  # add new repos for git versions
+  sudo apt-get install python-software-properties
+  sudo add-apt-repository ppa:git-core/ppa
   sudo apt-get update
   sudo apt-get install python-pip
   ./build-emacs-24.5.sh
