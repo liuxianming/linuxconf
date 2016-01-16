@@ -48,12 +48,9 @@ cd $HOME/linuxconf
 if [ "$(uname)" == "Darwin" ]; then
   sh -c "`curl -fsSL https://raw.github.com/skwp/dotfiles/master/install.sh`"
 else
-  git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
-  git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-  export PATH=$PATH:$HOME/.rbenv/bin
-  rbenv install 2.0.0-p353
-  eval "$(rbenv init -)"
-  rbenv shell 2.0.0-p353
+  sudo apt-get install ruby2.0
+  sudo apt-get install rubygems-integration
+  sudo gem install rake
   sh -c "`curl -fsSL https://raw.github.com/skwp/dotfiles/master/install.sh`"
 fi
 # copy the tmux configuration
