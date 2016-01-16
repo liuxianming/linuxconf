@@ -14,4 +14,9 @@ sudo apt-get install mosh
 sudo apt-get install global
 # prepare python packages
 sudo apt-get install python-dev python2.7-dev libatlas-dev
-sudo apt-get install python-numpy python-scipy
+sudo apt-get install python-pip
+sudo pip install "ipython[all]"
+sudo apt-get install python-numpy python-scipy python-matplotlib python-pandas python-sympy python-nose
+sudo apt-get update
+sudo apt-get install python-networkx
+pip install -U scikit-image
