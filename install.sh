@@ -25,8 +25,6 @@ if ! [[ -d $HOME/linuxconf ]]; then
 fi
 cd $HOME/linuxconf
 
-# setup python
-sudo pip install -r $HOME/linuxconf/python_package_list.txt
 # setup all packages using apt-get / brew
 cd $HOME/linuxconf
 if [ "$(uname)" == "Darwin" ]; then
@@ -36,6 +34,9 @@ else
   chmod +x ./setup_aptget.sh
   ./setup_aptget.sh
 fi
+
+# setup python
+sudo pip install -r $HOME/linuxconf/python_package_list.txt
 
 # protobuf
 echo Installing Protobuf
