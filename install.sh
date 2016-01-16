@@ -10,6 +10,7 @@ else
   cmd=sudo apt-get
   sudo apt-get update
   sudo apt-get install python-pip
+  ./build-emacs-24.5.sh
 fi
 
 # first set up git and download config
