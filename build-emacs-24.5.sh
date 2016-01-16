@@ -1,35 +1,13 @@
 #!/bin/bash
 
-# Build latest version of Emacs, version management with stow
-# OS: Ubuntu 14.04 LTS
-# version: 24.5
-# Toolkit: lucid
+sudo apt-get install build-essential
 
-# Warning, use updated version of this script in: https://github.com/favadi/build-emacs
+sudo apt-get build-dep emacs24
 
-set -e
+cd ~/Downloads && wget -c http://ftp.gnu.org/gnu/emacs/emacs-24.5.tar.gz
+cd ~/Downloads && tar -xf emacs-24.5.tar.* && cd emacs-24.5
+./configure
 
-readonly version="24.5"
+make -j 4
 
-# install dependencies
-sudo apt-get install -y stow build-essential libx11-dev xaw3dg-dev \
-     libjpeg-dev libpng12-dev libgif-dev libtiff4-dev libncurses5-dev \
-     libxft-dev librsvg2-dev libmagickcore-dev libmagick++-dev \
-     libxml2-dev libgpm-dev libghc-gconf-dev libotf-dev libm17n-dev \
-     libgnutls-dev
-
-# download source package
-if [[ ! -d emacs-"$version" ]]; then
-   wget http://ftp.gnu.org/gnu/emacs/emacs-"$version".tar.xz
-   tar xvf emacs-"$version".tar.xz
-fi
-
-# buil and install
-cd emacs-"$version"
-./configure \
-    --with-xft \
-    --with-x-toolkit=lucid
-make
-sudo make install prefix=/usr/local/bin/emacs-"$version"
-cd /usr/local/stow
-sudo stow emacs-"$version"
+sudo make install 
