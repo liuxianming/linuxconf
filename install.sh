@@ -60,6 +60,8 @@ else
 fi
 # copy the tmux configuration
 cp ./tmux.conf ~/.tmux.conf
+# remove vi-mode
+rm ~/.yadr/zsh/vi-mode.zsh
 
 # Configure emacs
 cp -rf emacs/emacs.d ~/.emacs.d
