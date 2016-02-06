@@ -85,3 +85,8 @@ if ! [[ -d ~/.ssh/ ]]; then
 fi
 cp ./ssh/config ~/.ssh/
 cp ./zsh/.zshrc ~/
+
+if [[ ! -e $HOME/.profile ]]; then
+  touch $HOME/.profile
+fi
+echo -e "if [ "$TERM" == "xterm" ]; then \n  # No it isn't, it's gnome-terminal \n  export TERM=xterm-256color\nfi" >> $HOME/.profile
