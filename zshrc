@@ -52,7 +52,7 @@ DISABLE_LS_COLORS="false"
 plugins=(git)
 
 # User configuration
-source .profile
+source $HOME/.profile
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
