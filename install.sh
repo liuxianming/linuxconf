@@ -49,7 +49,7 @@ make check
 sudo make install
 
 cd $HOME/linuxconf
-# Installing Zsh + YADR/prezto		 +# install oh-my-zsh
+# Installing Zsh + YADR/prezto
 if [ "$(uname)" == "Darwin" ]; then
   sh -c "`curl -fsSL https://raw.github.com/skwp/dotfiles/master/install.sh`"		
 else		
@@ -58,9 +58,9 @@ else
   sudo gem install rake		
   sh -c "`curl -fsSL https://raw.github.com/skwp/dotfiles/master/install.sh`"		
 fi		
-# copy the tmux configuration		  # copy the tmux configuration
-cp ./tmux.conf ~/.tmux.conf		  cp ./tmux.conf ~/.tmux.conf
-# remove vi-mode		 +# copy .zshrc file
+# copy the tmux configuration
+cp ./tmux.conf ~/.tmux.conf	
+# remove vi-mode
 rm ~/.yadr/zsh/vi-mode.zsh
 
 # Configure emacs
