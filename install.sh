@@ -49,12 +49,19 @@ make check
 sudo make install
 
 cd $HOME/linuxconf
-# install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-# copy the tmux configuration
-cp ./tmux.conf ~/.tmux.conf
-# copy .zshrc file
-cp ./zshrc ~/.zshrc
+# Installing Zsh + YADR/prezto		 +# install oh-my-zsh
+if [ "$(uname)" == "Darwin" ]; then
+  sh -c "`curl -fsSL https://raw.github.com/skwp/dotfiles/master/install.sh`"		
+else		
+  sudo apt-get install ruby2.0		
+  sudo apt-get install rubygems-integration		
+  sudo gem install rake		
+  sh -c "`curl -fsSL https://raw.github.com/skwp/dotfiles/master/install.sh`"		
+fi		
+# copy the tmux configuration		  # copy the tmux configuration
+cp ./tmux.conf ~/.tmux.conf		  cp ./tmux.conf ~/.tmux.conf
+# remove vi-mode		 +# copy .zshrc file
+rm ~/.yadr/zsh/vi-mode.zsh
 
 # Configure emacs
 cp -rf emacs/emacs.d ~/.emacs.d
