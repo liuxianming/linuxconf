@@ -8,7 +8,7 @@
 
 (with-eval-after-load 'company
   (add-to-list 'company-backends 'company-anaconda))
-
+(setq anaconda-mode-server-script "/usr/local/lib/python2.7/site-packages/anaconda_mode.py")
 (setq python-shell-interpreter "ipython")
 
 (provide 'init-anaconda-mode)
