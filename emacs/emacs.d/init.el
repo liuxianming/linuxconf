@@ -129,6 +129,7 @@
 (when (eq system-type 'darwin) ;; mac specific settings
   (setq mac-option-modifier 'meta)
   (global-set-key [kp-delete] 'delete-char) ;; sets fn-delete to be right-delete
+  (setq visible-bell nil) ;; disable visible-bell in mac emacs. This is a bug.
   )
 
 ;;----------------------------------------------------------------------------
