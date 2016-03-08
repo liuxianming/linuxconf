@@ -22,6 +22,7 @@ brew install openssl cmake
 brew install --with-cocoa emacs
 brew install mosh
 brew install macvim --override-system-vim
+brew install ispell
 # install gtags
 brew install global
 # install other softwares

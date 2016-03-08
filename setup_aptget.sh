@@ -19,4 +19,5 @@ sudo pip install "ipython[all]"
 sudo apt-get install libblas-dev liblapack-dev libatlas-base-dev gfortran
 sudo apt-get update
 sudo apt-get install python-networkx
+sudo apt-get install ispell
 pip install -U scikit-image
