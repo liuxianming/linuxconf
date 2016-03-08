@@ -1,8 +1,6 @@
 (when (< emacs-major-version 24)
   (require-package 'org))
 (require-package 'org-fstree)
-;; Add support to ebib, to enable using bibtex in orgmode
-(require-package 'ebib)
 (when *is-a-mac*
   (require-package 'org-mac-link)
   (autoload 'org-mac-grab-link "org-mac-link" nil t)
@@ -128,5 +126,36 @@
      (sql . nil)
      (sqlite . t))))
 
+
+;; Add support to bibtex citation management
+;; Using org-ref, https://github.com/jkitchin/org-ref
+(require-package 'org-ref)
+
+(setq reftex-default-bibliography '("~/Dropbox/bibliography/references.bib"))
+;; see org-ref for use of these variables
+(setq org-ref-bibliography-notes "~/Dropbox/bibliography/notes.org"
+      org-ref-default-bibliography '("~/Dropbox/bibliography/references.bib")
+      org-ref-pdf-directory "~/Dropbox/bibliography/bibtex-pdfs/")
+
+(setq helm-bibtex-bibliography "~/Dropbox/bibliography/references.bib")
+(setq helm-bibtex-library-path "~/Dropbox/bibliography/bibtex-pdfs")
+
+;; open pdf with system pdf viewer (works on mac)
+(setq helm-bibtex-pdf-open-function
+      (lambda (fpath)
+        (start-process "open" "*open*" "open" fpath)))
+
+;; alternative
+;; (setq helm-bibtex-pdf-open-function 'org-open-file)
+
+(setq helm-bibtex-notes-path "~/Dropbox/bibliography/helm-bibtex-notes")
+
+(require 'org-ref)
+(require 'org-ref-pdf)
+(require 'org-ref-url-utils)
+(require 'org-ref-latex)
+
+;; add pdflatex options
+(setq org-latex-pdf-process (list "latexmk -f -pdf %f"))
 
 (provide 'init-org)
