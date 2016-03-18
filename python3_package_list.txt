@@ -1,0 +1,7 @@
+numpy
+Cython
+scipy
+scikit-image
+scikit-learn
+pandas
+gensim

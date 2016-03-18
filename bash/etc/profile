@@ -46,10 +46,8 @@ LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH="/usr/local/opencv243/build/lib:$LD_LIBRARY_PATH"
 
 # python libs
-export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
-#export PYTHONPATH="/home/xliu102/anaconda/lib/python2.7/site-packages/:$PYTHONPATH"
-
-export PYTHONPATH="/usr/local/lib/python2.7/dist-packages:$PYTHONPATH"
+# export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
+# export PYTHONPATH="/home/xliu102/anaconda/lib/python2.7/site-packages/:$PYTHONPATH"
 export PYTHONPATH="/usr/local/opencv243/build/lib/python2.7/site-packages:$PYTHONPATH"
 
 export CUDA_ROOT="/usr/local/cuda/"
